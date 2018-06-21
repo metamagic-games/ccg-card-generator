@@ -1,6 +1,6 @@
 {
   "name": "ccg-card-generator",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Turn markdown into CCG cards",
   "main": "lib/index.js",
   "directories": {
