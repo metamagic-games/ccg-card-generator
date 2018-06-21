@@ -1,5 +1,7 @@
 # ccg-card-generator
 
+[![npm version](https://badge.fury.io/js/ccg-card-generator.svg)](https://badge.fury.io/js/ccg-card-generator)
+
 Turn markdown into a Player's Handbook-style document. 
 
 Based on [Homebrewery](https://github.com/stolksdorf/homebrewery)'s stylesheet.
