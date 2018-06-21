@@ -1,8 +1,6 @@
 # ccg-card-generator
 
-[![npm version](https://badge.fury.io/js/ccg-card-generator.svg)](https://badge.fury.io/js/ccg-card-generator)
-
-[![GitHub version](https://badge.fury.io/gh/monolith-games%2Fccg-card-generator.svg)](https://badge.fury.io/gh/monolith-games%2Fccg-card-generator)
+[![npm version](https://badge.fury.io/js/ccg-card-generator.svg)](https://badge.fury.io/js/ccg-card-generator) [![GitHub version](https://badge.fury.io/gh/monolith-games%2Fccg-card-generator.svg)](https://badge.fury.io/gh/monolith-games%2Fccg-card-generator)
 
 Turn markdown into a Player's Handbook-style document. 
 
