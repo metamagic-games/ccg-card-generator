@@ -1,0 +1,57 @@
+{
+  "name": "ccg-card-generator",
+  "version": "1.1.2",
+  "description": "Turn markdown into a players handbook",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "build": "mcclowes-scripts build && copyup src/styles/* lib",
+    "watch": "mcclowes-scripts watch",
+    "format": "mcclowes-scripts format"
+  },
+  "pre-commit": [
+    "build"
+  ],
+  "babel": {
+    "presets": [
+      "mcclowes"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "mcclowes"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/monolith-games/ccg-card-generator.git"
+  },
+  "keywords": [
+    "players",
+    "handbook",
+    "d&d",
+    "dnd",
+    "tabletop",
+    "gaming",
+    "markdown",
+    "pdf",
+    "homebrewery"
+  ],
+  "files": [
+    "lib"
+  ],
+  "author": "Max Clayton Clowes <maxcc@me.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/monolith-games/ccg-card-generator/issues"
+  },
+  "homepage": "https://github.com/monolith-games/ccg-card-generator#readme",
+  "dependencies": {
+    "copyfiles": "^2.0.0",
+    "fs": "0.0.1-security",
+    "html-pdf-chrome": "^0.5.0"
+  },
+  "devDependencies": {
+    "mcclowes-scripts": "^0.3.6"
+  }
+}
