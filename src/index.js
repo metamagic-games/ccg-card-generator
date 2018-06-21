@@ -1,1 +1,1 @@
-export { default as ccgCardGenerator, } from "./scripts/generatePDF";
+export { default as ccggen, } from "./scripts/generatePDF";

@@ -3,7 +3,7 @@ import fs from "fs";
 
 // ---------------------------------
 
-export const parseHTML = (targetURL, style, markdownOptions) => {
+export const generateHTML = (targetURL, style, markdownOptions) => {
 	return `
 		<html>
 			<head>
@@ -16,6 +16,7 @@ export const parseHTML = (targetURL, style, markdownOptions) => {
 			
 			<body class = "document">
 				<div class = "pages">
+				HEELLLLOOO WORLD
 				</div>
 			</body>
 		</html>
