@@ -2,20 +2,20 @@ import fs from "fs";
 import * as htmlPdfChrome from "html-pdf-chrome";
 import { generateHTML, } from "./generateHTML.js";
 
+// ---------------------------------
+
 const pdfOptions = {
 	"printOptions": {
 		displayHeaderFooter: false,
 	},
 };
 
-const markdownOptions = {
-	"encoding": "utf8",
-};
-
 const style = "../styles/cards.css";
 
-const generatePDF = ( target, destination, options, ) => {
-	const html = generateHTML( target, ( options.style || style ), ( options.markdownOptions || markdownOptions ) );
+// ---------------------------------
+
+const generatePDF = ( cards, destination, options, ) => {
+	const html = generateHTML( cards, ( options.style || style ), );
 
 	console.log("Options:", options);
 
