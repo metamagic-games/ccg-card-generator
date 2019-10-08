@@ -19,7 +19,7 @@ Based on [Homebrewery](https://github.com/stolksdorf/homebrewery)'s stylesheet.
 
   const options = {
     "debug": true,
-    "style": "./node_modules/ccg-card-generator/lib/styles/homebrewery-styles.css",
+    "style": "./node_modules/ccg-card-generator/lib/styles/prototype.css",
     "printOptions": {
       displayHeaderFooter: false,
     },
