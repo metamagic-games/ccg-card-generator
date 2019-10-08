@@ -31,11 +31,11 @@
   border: 1px solid black;
 }
 
-.card .card-name {
+.card .card-section-name {
   font-weight: bold;
   width: 100%;
 }
 
-.card .card-text {
+.card .card-section-text {
   width: 100%;
 }
