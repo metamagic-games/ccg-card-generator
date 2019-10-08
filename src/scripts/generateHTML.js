@@ -9,7 +9,7 @@ export const generateHTML = ( cards, style, dimensions) => {
 	const cardsPerRow = Math.floor( ( dimensions.page.width - dimensions.page.padding ) / ( dimensions.card.width + dimensions.card.margin + dimensions.card.border ))
 	const cardsPerColumn = Math.floor( ( dimensions.page.height - dimensions.page.padding ) / ( dimensions.card.height + dimensions.card.margin + dimensions.card.border ))
 	const cardsPerPage = cardsPerRow * cardsPerColumn
-	console.log(cardsPerRow, cardsPerColumn, cardsPerPage )
+
 	const pages = Math.ceil(cards.length / cardsPerPage)
 
 	let cardPages = Array(pages)
@@ -61,8 +61,9 @@ export const generateHTML = ( cards, style, dimensions) => {
 														${
 															Object.keys(card).map((key) => {
 																const value = card[key]
+
 																return `
-																	<div class="card-key">
+																	<div class="card-section-${key}">
 																		${ value }
 																	</div>
 																`

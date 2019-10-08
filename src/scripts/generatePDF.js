@@ -68,6 +68,8 @@ const generatePDF = ( cards, destination, options, ) => {
 		html, 
 		printOptions,
 	).then((newPdf) => newPdf.toFile(destination || "test.pdf"));
+
+	console.log("Finished!");
 };
 
 export default generatePDF;
