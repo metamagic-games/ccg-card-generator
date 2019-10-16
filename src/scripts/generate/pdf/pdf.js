@@ -1,6 +1,6 @@
-import fs from "fs";
 import * as htmlPdfChrome from "html-pdf-chrome";
-import { generateHTML, } from "./generateHTML.js";
+import fs from "fs";
+import generateHtml, { htmlBody, } from "../html";
 
 // ---------------------------------
 
@@ -41,16 +41,20 @@ const pdfOptions = {
 
 // ---------------------------------
 
-const generatePDF = ( cards, destination, options, ) => {
+const generatePdf = ( cards, destination, options, ) => {
+	console.log('Generating cards...')
+
+	console.log("Options:", options);
+
 	const style = options.customStyles 
 		? options.customStyles 
 		: ( stylesheets[options.style] || stylesheets.prototype );
 	
 	const dimensions = options.customDimensions || elementDimensions;
 
-	const html = generateHTML( cards, style, dimensions );
+	const bodyGenerator = options.bodyGenerator || htmlBody
 
-	console.log("Options:", options);
+	const html = generateHtml( cards, style, dimensions, bodyGenerator );
 
 	if (options.debug) {
 		console.log("Saving interim HTML...");
@@ -72,4 +76,4 @@ const generatePDF = ( cards, destination, options, ) => {
 	console.log("Finished!");
 };
 
-export default generatePDF;
+export default generatePdf;

@@ -1,1 +1,1 @@
-export { default as ccggen, } from "./scripts/generatePDF";
+export { default as ccggen, } from "./scripts/generate/pdf";
