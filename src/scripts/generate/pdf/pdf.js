@@ -25,7 +25,7 @@ const elementDimensions = {
 	}
 }
 
-const pdfOptions = {
+const defaultPdfOptions = {
 	"printOptions": {
 		"displayHeaderFooter": false,
 		marginTop: 0,
@@ -41,7 +41,7 @@ const pdfOptions = {
 
 // ---------------------------------
 
-const generatePdf = ( cards, destination, options, ) => {
+const generatePdf = ( cards, destination="./output.pdf", options, ) => {
 	console.log('Generating cards...')
 
 	console.log("Options:", options);
@@ -66,14 +66,15 @@ const generatePdf = ( cards, destination, options, ) => {
 
 	console.log("Creating PDF...");
 
-	const printOptions = options.pdfOptions || pdfOptions
+	const printOptions = options.pdfOptions || defaultPdfOptions
 
-	htmlPdfChrome.create(
-		html, 
-		printOptions,
-	).then((newPdf) => newPdf.toFile(destination || "test.pdf"));
-
-	console.log("Finished!");
+	return htmlPdfChrome
+		.create(
+			html, 
+			printOptions,
+		)
+		.then((newPdf) => newPdf.toFile(destination || "test.pdf"));
+		.then(_=>console.log(`${destination} generated`))
 };
 
 export default generatePdf;
