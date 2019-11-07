@@ -73,7 +73,7 @@ const generatePdf = ( cards, destination="./output.pdf", options, ) => {
 			html, 
 			printOptions,
 		)
-		.then((newPdf) => newPdf.toFile(destination || "test.pdf"));
+		.then((newPdf) => newPdf.toFile(destination || "test.pdf"))
 		.then(_=>console.log(`${destination} generated`))
 };
 
