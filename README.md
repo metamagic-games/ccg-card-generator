@@ -27,3 +27,7 @@ Based on [Homebrewery](https://github.com/stolksdorf/homebrewery)'s stylesheet.
 
   ccg-card-generator( target, destination, options);
 ```
+
+## Contributing
+
+If you'd like to contribute, please fork the repository and use a feature branch. Pull requests are welcome!
