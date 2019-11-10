@@ -8,6 +8,8 @@ Quickly generate pages of trading cards. Useful for rapid prototyping.
 
 ## Usage
 
+For a working example, take a look at [ccg-card-generator-sample-project](https://github.com/metamagic-games/ccg-card-generator-sample-project)
+
 ```
   const { ccg-card-generator, } = require("ccg-card-generator");
   
