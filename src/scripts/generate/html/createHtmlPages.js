@@ -46,7 +46,7 @@ const generatePage = (cardPage, pageNumber, dimensions) => {
   `
 }
 
-const generateHtmlBody = (dimensions, cardPages) => {
+const createHtmlPages = (dimensions, cardPages) => {
   return `
     <body class="document">
       <div class="pages">
@@ -60,4 +60,4 @@ const generateHtmlBody = (dimensions, cardPages) => {
   `
 }
 
-export default generateHtmlBody
+export default createHtmlPages

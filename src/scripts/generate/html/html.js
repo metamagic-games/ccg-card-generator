@@ -1,10 +1,13 @@
 import  _ from "lodash";
-import fs from "fs";
-import generateHtmlBody from './htmlBody'
+
+import readStylesheet from './readStylesheet'
+import createHtmlPages from './createHtmlPages'
 
 const generateHTML = (cards, style, dimensions, bodyGenerator) => {
 	const cardsPerRow = Math.floor( ( dimensions.page.width - dimensions.page.padding ) / ( dimensions.card.width + dimensions.card.margin + dimensions.card.border ))
+	
 	const cardsPerColumn = Math.floor( ( dimensions.page.height - dimensions.page.padding ) / ( dimensions.card.height + dimensions.card.margin + dimensions.card.border ))
+	
 	const cardsPerPage = cardsPerRow * cardsPerColumn
 
 	const pages = Math.ceil(cards.length / cardsPerPage)
@@ -18,20 +21,20 @@ const generateHTML = (cards, style, dimensions, bodyGenerator) => {
 		cardPages[page].push(card)
 	})
 
+	const css = readStylesheet(styleOptions)
+
 	return `
 		<html>
 			<head>
 				<style>
-					${ fs.readFileSync(style, function(err) {
-							if (err) console.log(err);
-						}) }
+					${ css }
 				</style>
 			</head>
 			
 			${
 				bodyGenerator
 					? bodyGenerator(dimensions, cardPages)
-					: generateHtmlBody(dimensions, cardPages)
+					: createHtmlPages(dimensions, cardPages)
 			}
 		</html>
 	`;

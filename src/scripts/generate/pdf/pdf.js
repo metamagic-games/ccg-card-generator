@@ -4,8 +4,8 @@ import generateHtml, { htmlBody, } from "../html";
 
 // ---------------------------------
 
-const height = 282 
-const width = 216
+const HEIGHT = 282 
+const WIDTH = 216
 
 const stylesheets = {
 	"prototype": "./node_modules/ccg-card-generator/lib/styles/prototype.css",
@@ -13,8 +13,8 @@ const stylesheets = {
 
 const elementDimensions = {
 	"page": {
-		"height": height,
-		"width": width,
+		"height": HEIGHT,
+		"width": WIDTH,
 		"padding": 5,
 	},
 	"card": {
@@ -32,19 +32,19 @@ const defaultPdfOptions = {
 		marginRight: 0,
 		marginLeft: 0,
 		marginBottom: 0,
-		// marginTop: elementDimensions.page.margin,
-		// marginRight: elementDimensions.page.margin,
-		// marginLeft: elementDimensions.page.margin,
-		// marginBottom: elementDimensions.page.margin,
 	},
 };
 
-// ---------------------------------
+const writeDebugHTML = (html) => {
+	console.log("Saving interim HTML...");
+
+	fs.writeFile("debug.html", html, function(err) {
+		if (err) console.log(err);
+	});
+}
 
 const generatePdf = ( cards, destination="./output.pdf", options, ) => {
 	console.log('Generating cards...')
-
-	console.log("Options:", options);
 
 	const style = options.customStyles 
 		? options.customStyles 
@@ -57,16 +57,13 @@ const generatePdf = ( cards, destination="./output.pdf", options, ) => {
 	const html = generateHtml( cards, style, dimensions, bodyGenerator );
 
 	if (options.debug) {
-		console.log("Saving interim HTML...");
-
-		fs.writeFile("debug.html", html, function(err) {
-			if (err) console.log(err);
-		});
+		writeDebugHTML(html)
 	}
 
 	console.log("Creating PDF...");
 
 	const printOptions = options.pdfOptions || defaultPdfOptions
+	console.log("Print options:", printOptions);
 
 	return htmlPdfChrome
 		.create(
