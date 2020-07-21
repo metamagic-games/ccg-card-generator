@@ -10,12 +10,12 @@
     "build": "./node_modules/.bin/babel src --out-dir lib --ignore '**/*.spec.js' && copyup src/styles/* lib",
     "format": "pretty-quick --staged",
     "format:hard": "prettier",
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "test:watch": "jest --watch --runInBand --bail"
   },
   "husky": {
     "hooks": {
-      "pre-push": "npm test",
+      "pre-push": "npm test"
     }
   },
   "repository": {
