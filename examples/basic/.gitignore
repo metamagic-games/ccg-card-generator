@@ -1,0 +1,6 @@
+
+node_modules
+*.pdf
+*.codekit3
+
+.DS_Store
