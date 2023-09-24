@@ -75,6 +75,7 @@ const generatePage = (cardPage, pageNumber, dimensions) => {
 }
 
 const generateMtgHtmlBody = (dimensions, cardPages) => {
+  console.log('foo')
   return `
     <body class="document">
       <div class="pages">
