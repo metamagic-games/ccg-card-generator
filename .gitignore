@@ -9,3 +9,5 @@ yarn-error.log
 /lib
 
 .DS_Store
+
+*.pdf
