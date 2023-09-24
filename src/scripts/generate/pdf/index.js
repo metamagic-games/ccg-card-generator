@@ -48,6 +48,8 @@ const generatePdf = (cards, options) => {
   	dimensions=defaultDimensions,
   } = options
 
+  if (debug) console.log(cards, options)
+
   console.log("Generating cards...");
   if (debug) console.log(style, dimensions)
 
