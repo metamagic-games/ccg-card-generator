@@ -78,7 +78,7 @@ table {
 
 .card-container {
   border: 1px solid black;
-  border-radius: 5%;
+  border-radius: 5% / 4%;
   box-sizing: border-box;
   background: #171314;  
 }
@@ -86,7 +86,7 @@ table {
 .card-background {
   max-height: 100%;
   height: 90%;
-  margin: 5% 5% 0 5%;
+  margin: 4% 4% 0 4%;
   border-top-left-radius: 3%;
   border-top-right-radius: 3%;
   border-bottom-left-radius: 8%;
@@ -122,7 +122,7 @@ table {
 
 .frame-text-box {
   box-shadow: 
-    0 0 0 5px #26714A,
+    0 0 0 3px #26714A,
     -3px 3px 2px 5px #171314;
 }
 
@@ -176,7 +176,7 @@ table {
 
 .name,
 .type {
-  font-size: 100%;
+  font-size: 60%;
   margin-left: 3%;
   align-self: baseline;
   font-weight: 600;
@@ -239,7 +239,7 @@ p {
   color: white;
   display: flex;
   justify-content: space-between;
-  margin: 5px 15px 0 15px; 
+  margin: 3% 5% 0 5%; 
 }
 
 /* frame bottom indent */
@@ -254,22 +254,22 @@ p {
 
 .fbi-left,
 .fbi-right {
-  font-size: 10px;
+  font-size: 35%;
   position: relative;
-  top: 6px;
+  top: 5%;
 }
 
 .fbi-center {
   border-radius: 60%;
-  flex-basis: 41px;
-  height: 1%;
+  width: 10%;
+  height: 45%;
   position: relative;
-  bottom: 11px;
+  bottom: 5%;
   z-index: 2;
   background: lightgray;
   background-image: url(https://image.ibb.co/jyq34n/holofoil_texture_2.jpg);
-  box-shadow: 
-    0 0 0 4px #171314;
+  box-shadow: 0 0 0 3px #171314;
+  object-fit: cover;
 }
 
 .inner-margins {
