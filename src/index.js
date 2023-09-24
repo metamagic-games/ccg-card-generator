@@ -1,1 +1,3 @@
-export { default as generateCards } from "./scripts/generate/pdf";
+import generatePdf from "./scripts/generate/pdf";
+
+export default generatePdf

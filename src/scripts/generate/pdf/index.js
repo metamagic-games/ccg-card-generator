@@ -29,7 +29,7 @@ const defaultPdfOptions = {
   },
 };
 
-const defaultStylesheet: "./node_modules/ccg-card-generator/lib/styles/prototype.css";
+const defaultStylesheet = "./node_modules/ccg-card-generator/lib/styles/prototype.css";
 
 const writeDebugHTML = (html) => {
   console.log("Saving interim HTML...");
