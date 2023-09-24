@@ -18,7 +18,7 @@ const getCardsPerPage = (dimensions) => {
   return cardsPerRow * cardsPerColumn;
 };
 
-const generateHTML = (cards, styles, dimensions) => {
+const generateHTML = (cards, styles, dimensions, htmlGenerator=createHtmlPages) => {
   const cardsPerPage = getCardsPerPage(dimensions);
   const totalPages = Math.ceil(cards.length / cardsPerPage);
 
@@ -43,7 +43,7 @@ const generateHTML = (cards, styles, dimensions) => {
         </style>
       </head>
       
-      ${createHtmlPages(dimensions, cardPages)}
+      ${htmlGenerator(dimensions, cardPages)}
     </html>
   `;
 };

@@ -28,21 +28,22 @@
   border-radius: 5px;
   outline: 1px dashed #aaa;
   border: 1px solid black;
-  font-family: helvetica;
 }
 
-.card .card-background {
-  background: #eeeeee;
-  border-radius: 10px;
-  padding: 1em;
-}
-
-.card .card-name {
-  font-size: 1.2em;
+.card .card-section-name {
   font-weight: bold;
-  margin-bottom: 0.5em;
+  width: 100%;
 }
 
-.card .card-text {
-  font-style: italic;
+.card .card-section-type {
+  width: 100%;
+}
+
+.card .card-section-value {
+  width: 100%;
+  font-size: 2em;
+}
+
+.card .card-section-text {
+  width: 100%;
 }

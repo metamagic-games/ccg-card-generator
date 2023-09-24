@@ -46,6 +46,7 @@ const generatePdf = (cards, options) => {
   	pdfOptions, 
   	style=defaultStylesheet,
   	dimensions=defaultDimensions,
+    htmlGenerator,
   } = options
 
   if (debug) console.log(cards, options)
@@ -53,7 +54,7 @@ const generatePdf = (cards, options) => {
   console.log("Generating cards...");
   if (debug) console.log(style, dimensions)
 
-  const html = generateHtml(cards, style, dimensions);
+  const html = generateHtml(cards, style, dimensions, htmlGenerator);
 
   if (debug) {
     writeDebugHTML(html);

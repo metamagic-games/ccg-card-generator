@@ -1,0 +1,41 @@
+{
+  "name": "ccg-card-generator-sample-project",
+  "version": "1.1.2",
+  "description": "Easily generate pages of trading cards from JSON input",
+  "main": "scripts/createCards.js",
+  "scripts": {
+    "build": "babel-node ./src/createCards",
+    "watch": "watch 'npm run build' ./src --wait=1",
+    "format": "pretty-quick --staged"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paragon-games/ccg-card-generator-sample-project.git"
+  },
+  "keywords": [
+    "ccg",
+    "tcg",
+    "generator",
+    "sample",
+    "project"
+  ],
+  "author": "Max Clayton Clowes <maxcc@me.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paragon-games/ccg-card-generator-sample-project/issues"
+  },
+  "homepage": "https://github.com/paragon-games/ccg-card-generator-sample-project#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.22.15",
+    "@babel/core": "^7.22.20",
+    "@babel/node": "^7.22.19",
+    "@babel/preset-env": "^7.22.20",
+    "babel-jest": "^29.7.0",
+    "ccg-card-generator": "^2.0.6",
+    "lodash": "^4.17.21",
+    "marked": "^9.0.3",
+    "path": "^0.12.7",
+    "prettier": "^3.0.3",
+    "pretty-quick": "^3.1.3"
+  }
+}
