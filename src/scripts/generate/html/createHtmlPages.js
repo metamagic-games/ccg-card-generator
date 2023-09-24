@@ -9,20 +9,20 @@ const generateCard = (card, dimensions) => {
         margin-right: ${dimensions.card.margin}mm;
       "
     >
-      ${
-        Object.keys(card).map((key) => {
-          const value = card[key]
+      ${Object.keys(card)
+        .map((key) => {
+          const value = card[key];
 
           return `
             <div class="card-section-${key}">
-              ${ value }
+              ${value}
             </div>
-          `
-        }).join('')
-      }
+          `;
+        })
+        .join("")}
     </div>
   `;
-}
+};
 
 const generatePage = (cardPage, pageNumber, dimensions) => {
   return `
@@ -36,28 +36,27 @@ const generatePage = (cardPage, pageNumber, dimensions) => {
         padding: ${dimensions.page.padding}mm;
       "
     >
-      ${ 
-        cardPage.map( ( card ) => {
-            return generateCard(card, dimensions)
-          })
-          .join(" ")
-      }
+      ${cardPage
+        .map((card) => {
+          return generateCard(card, dimensions);
+        })
+        .join(" ")}
     </div>
-  `
-}
+  `;
+};
 
 const createHtmlPages = (dimensions, cardPages) => {
   return `
     <body class="document">
       <div class="pages">
-        ${
-          cardPages.map( ( cardPage, i ) => {
-            return generatePage(cardPage, i, dimensions)
-          }).join('')
-        }
+        ${cardPages
+          .map((cardPage, i) => {
+            return generatePage(cardPage, i, dimensions);
+          })
+          .join("")}
       </div>
     </body>
-  `
-}
+  `;
+};
 
-export default createHtmlPages
+export default createHtmlPages;

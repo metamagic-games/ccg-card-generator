@@ -8,14 +8,14 @@
   },
   "scripts": {
     "build": "./node_modules/.bin/babel src --out-dir lib --ignore '**/*.spec.js' && copyup src/styles/* lib",
-    "format": "pretty-quick --staged",
-    "format:hard": "prettier",
+    "format": "prettier --write src/",
+    "format:staged": "pretty-quick --staged --pattern ./src/**",
     "test": "jest --passWithNoTests",
     "test:watch": "jest --watch --runInBand --bail"
   },
   "husky": {
     "hooks": {
-      "pre-push": "npm test && npm run build"
+      "pre-commit": "npm run format:staged"
     }
   },
   "repository": {
@@ -43,18 +43,18 @@
   },
   "homepage": "https://github.com/metamagic-games/ccg-card-generator#readme",
   "dependencies": {
-    "copyfiles": "^2.0.0",
+    "copyfiles": "^2.4.1",
     "fs": "0.0.1-security",
-    "html-pdf-chrome": "^0.5.0"
+    "html-pdf-chrome": "^0.8.4"
   },
   "devDependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.8.7",
-    "@babel/preset-env": "^7.8.7",
-    "babel-jest": "^25.1.0",
-    "husky": "^4.2.5",
-    "jest": "^25.1.0",
-    "prettier": "^1.19.1",
-    "pretty-quick": "^2.0.1"
+    "@babel/cli": "^7.22.15",
+    "@babel/core": "^7.22.20",
+    "@babel/preset-env": "^7.22.20",
+    "babel-jest": "^29.7.0",
+    "husky": "^8.0.3",
+    "jest": "^29.7.0",
+    "prettier": "^3.0.3",
+    "pretty-quick": "^3.1.3"
   }
 }
