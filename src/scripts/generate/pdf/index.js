@@ -1,11 +1,11 @@
 import * as htmlPdfChrome from "html-pdf-chrome";
 import fs from "fs";
-import generateHtml, { htmlBody } from "../html";
+import generateHtml from "../html";
 
 const HEIGHT = 282;
 const WIDTH = 216;
 
-const elementDimensions = {
+const defaultDimensions = {
   page: {
     height: HEIGHT,
     width: WIDTH,
@@ -29,9 +29,7 @@ const defaultPdfOptions = {
   },
 };
 
-const stylesheets = {
-  default: "./node_modules/ccg-card-generator/lib/styles/prototype.css",
-};
+const defaultStylesheet: "./node_modules/ccg-card-generator/lib/styles/prototype.css";
 
 const writeDebugHTML = (html) => {
   console.log("Saving interim HTML...");
@@ -46,10 +44,12 @@ const generatePdf = (cards, options) => {
   	debug=true,
   	destination="./output.pdf", 
   	pdfOptions, 
-  	style=stylesheets.default, 
-  	dimensions=elementDimensions,
+  	style=defaultStylesheet,
+  	dimensions=defaultDimensions,
   } = options
+
   console.log("Generating cards...");
+  if (debug) console.log(style, dimensions)
 
   const html = generateHtml(cards, style, dimensions);
 
