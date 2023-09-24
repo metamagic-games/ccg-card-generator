@@ -3,7 +3,7 @@ import fs from "fs";
 
 import createHtmlPages from "./createHtmlPages";
 
-const getCardsPerPage = () => {
+const getCardsPerPage = (dimensions) => {
   const cardsPerRow = Math.floor(
     (dimensions.page.width - dimensions.page.padding) /
       (dimensions.card.width + dimensions.card.margin + dimensions.card.border),
