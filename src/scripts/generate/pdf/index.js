@@ -41,12 +41,19 @@ const writeDebugHTML = (html) => {
   });
 };
 
-const generatePdf = (cards, destination = "./output.pdf", pdfOptions, style=stylesheets.default, dimensions=elementDimensions) => {
+const generatePdf = (cards, options) => {
+  const {
+  	debug=true,
+  	destination="./output.pdf", 
+  	pdfOptions, 
+  	style=stylesheets.default, 
+  	dimensions=elementDimensions,
+  } = options
   console.log("Generating cards...");
 
   const html = generateHtml(cards, style, dimensions);
 
-  if (options.debug) {
+  if (debug) {
     writeDebugHTML(html);
   }
 
