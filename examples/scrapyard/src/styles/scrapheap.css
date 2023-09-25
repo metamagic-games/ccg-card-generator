@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+
+  --background-color: #f9f9f9;
+  --border-color: black;
+
+  font-family: "Orbitron", monospace;
+}
+
+.document {
+  margin: 0;
+}
+
+.pages {
+  display: flex;
+  flex-direction: column;
+  font-family: Helvetica, sans-serif;
+  flex-wrap: wrap;
+}
+
+.page {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  outline: 1px dashed black;
+}
+
+.card {
+  align-items: center;
+  background: var(--background-color);
+  position: relative;
+  display: flex;
+  margin-right: 10mm;
+  margin-bottom: 10mm;
+  padding: 1em;
+  flex-wrap: wrap;
+  flex-direction: column;
+  border-radius: 5px;
+  outline: 1px dashed #aaa;
+  border: 1px solid black;
+  overflow: hidden;
+}
+
+.card .card-section-name {
+  font-weight: bold;
+  width: 80%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid black;
+  padding: 0.25em;
+}
+
+.card .card-section-type {
+  position: absolute;
+  left: 0;
+  top: 30px;
+  border: 1px solid black;
+  padding: 0.125em 0.25em;
+  font-size: 0.65em;
+}
+
+.card .card-section-value {
+  position: absolute;
+  left: 0;
+  top: 50px;
+  border: 1px solid black;
+  padding: 0.125em 0.25em;
+  font-size: 0.65em;
+}
+
+.card .card-section-upgrade,
+.card .card-section-instant {
+  visibility: hidden;
+}
+
+.card .card-section-upgrade:before,
+.card .card-section-instant:before {
+  visibility: visible;
+  content: '+';
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  border-radius: 2px;
+  border: 1px solid black;
+  width: 20px;
+  height: 20px;
+  padding: 0.25em;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+.card .card-section-text {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  border: 1px solid black;
+  border-radius: 2px;
+  background: #efefef;
+  min-height: 25%;
+  text-align: center;
+  padding: 0.5em;
+  font-size: 0.8em;
+}
+
+.card .card-section-attack,
+.card .card-section-defense {
+  border: 1px solid black;
+  border-radius: 2px;
+  position: absolute;
+  bottom: 5px;
+  padding: 0.25em;
+  background: #efefef;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+}
+
+.card .card-section-attack {
+  left: 5px;
+}
+
+.card .card-section-defense {
+  right: 5px;
+}

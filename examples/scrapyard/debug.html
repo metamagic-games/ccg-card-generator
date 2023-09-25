@@ -1,0 +1,1554 @@
+
+    <html>
+      <head>
+        <style>
+          @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+
+  --background-color: #f9f9f9;
+  --border-color: black;
+
+  font-family: "Orbitron", monospace;
+}
+
+.document {
+  margin: 0;
+}
+
+.pages {
+  display: flex;
+  flex-direction: column;
+  font-family: Helvetica, sans-serif;
+  flex-wrap: wrap;
+}
+
+.page {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  outline: 1px dashed black;
+}
+
+.card {
+  align-items: center;
+  background: var(--background-color);
+  position: relative;
+  display: flex;
+  margin-right: 10mm;
+  margin-bottom: 10mm;
+  padding: 1em;
+  flex-wrap: wrap;
+  flex-direction: column;
+  border-radius: 5px;
+  outline: 1px dashed #aaa;
+  border: 1px solid black;
+  overflow: hidden;
+}
+
+.card .card-section-name {
+  font-weight: bold;
+  width: 80%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid black;
+  padding: 0.25em;
+}
+
+.card .card-section-type {
+  position: absolute;
+  left: 0;
+  top: 30px;
+  border: 1px solid black;
+  padding: 0.125em 0.25em;
+  font-size: 0.65em;
+}
+
+.card .card-section-value {
+  position: absolute;
+  left: 0;
+  top: 50px;
+  border: 1px solid black;
+  padding: 0.125em 0.25em;
+  font-size: 0.65em;
+}
+
+.card .card-section-upgrade,
+.card .card-section-instant {
+  visibility: hidden;
+}
+
+.card .card-section-upgrade:before,
+.card .card-section-instant:before {
+  visibility: visible;
+  content: '+';
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  border-radius: 2px;
+  border: 1px solid black;
+  width: 20px;
+  height: 20px;
+  padding: 0.25em;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+.card .card-section-text {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  border: 1px solid black;
+  border-radius: 2px;
+  background: #efefef;
+  min-height: 25%;
+  text-align: center;
+  padding: 0.5em;
+  font-size: 0.8em;
+}
+
+.card .card-section-attack,
+.card .card-section-defense {
+  border: 1px solid black;
+  border-radius: 2px;
+  position: absolute;
+  bottom: 5px;
+  padding: 0.25em;
+  background: #efefef;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+}
+
+.card .card-section-attack {
+  left: 5px;
+}
+
+.card .card-section-defense {
+  right: 5px;
+}
+        </style>
+      </head>
+      
+      
+    <body class="document">
+      <div class="pages">
+        
+    <div 
+      class="page page-0"
+      style="
+        height: 282mm;
+        width: 216mm;
+        max-height: 282mm;
+        max-width: 216mm;
+        padding: 5mm;
+      "
+    >
+      
+    <div 
+      class="card" 
+      style="
+        height: 82mm;
+        width: 59mm;
+        margin-bottom: 2mm;
+        margin-right: 2mm;
+      "
+    >
+      
+            <div class="card-section-name">
+              Scrap Hulk
+            </div>
+          
+            <div class="card-section-type">
+              Mech
+            </div>
+          
+            <div class="card-section-value">
+              1
+            </div>
+          
+            <div class="card-section-text">
+              Launch: Roll. This has that much health.
+            </div>
+          
+            <div class="card-section-attack">
+              3
+            </div>
+          
+            <div class="card-section-defense">
+              *
+            </div>
+          
+    </div>
+   
+    <div 
+      class="card" 
+      style="
+        height: 82mm;
+        width: 59mm;
+        margin-bottom: 2mm;
+        margin-right: 2mm;
+      "
+    >
+      
+            <div class="card-section-name">
+              Unstable Laz-Unit
+            </div>
+          
+            <div class="card-section-type">
+              Mech
+            </div>
+          
+            <div class="card-section-value">
+              1
+            </div>
+          
+            <div class="card-section-text">
+              Roll at the start of your turn. This has that much attack until your next turn.
+            </div>
+          
+            <div class="card-section-attack">
+              *
+            </div>
+          
+            <div class="card-section-defense">
+              2
+            </div>
+          
+    </div>
+   
+    <div 
+      class="card" 
+      style="
+        height: 82mm;
+        width: 59mm;
+        margin-bottom: 2mm;
+        margin-right: 2mm;
+      "
+    >
+      
+            <div class="card-section-name">
+              Smoking Hulk
+            </div>
+          
+            <div class="card-section-type">
+              Mech
+            </div>
+          
+            <div class="card-section-value">
+              2
+            </div>
+          
+            <div class="card-section-text">
+              You may burn 1 as a component to summon this
+            </div>
+          
+            <div class="card-section-attack">
+              6
+            </div>
+          
+            <div class="card-section-defense">
+              6
+            </div>
+          
+    </div>
+   
+    <div 
+      class="card" 
+      style="
+        height: 82mm;
+        width: 59mm;
+        margin-bottom: 2mm;
+        margin-right: 2mm;
+      "
+    >
+      
+            <div class="card-section-name">
+              Prototype
+            </div>
+          
+            <div class="card-section-type">
+              Mech
+            </div>
+          
+            <div class="card-section-value">
+              1
+            </div>
+          
+            <div class="card-section-text">
+              When used to summon a mech, this counts as two components
+            </div>
+          
+            <div class="card-section-attack">
+              1
+            </div>
+          
+            <div class="card-section-defense">
+              1
+            </div>
+          
+    </div>
+   
+    <div 
+      class="card" 
+      style="
+        height: 82mm;
+        width: 59mm;
+        margin-bottom: 2mm;
+        margin-right: 2mm;
+      "
+    >
+      
+            <div class="card-section-name">
+              Warmachine
+            </div>
+          
+            <div class="card-section-type">
+              Mech
+            </div>
+          
+            <div class="card-section-value">
+              2
+            </div>
+          
+            <div class="card-section-attack">
+              10
+            </div>
+          
+            <div class="card-section-defense">
+              10
+            </div>
+          
+    </div>
+   
+    <div 
+      class="card" 
+      style="
+        height: 82mm;
+        width: 59mm;
+        margin-bottom: 2mm;
+        margin-right: 2mm;
+      "
+    >
+      
+            <div class="card-section-name">
+              Ferromancer
+            </div>
+          
+            <div class="card-section-type">
+              Mage
+            </div>
+          
+            <div class="card-section-value">
+              1
+            </div>
+          
+            <div class="card-section-text">
+              Sacrifice: Destroy a mech
+            </div>
+          
+            <div class="card-section-attack">
+              2
+            </div>
+          
+            <div class="card-section-defense">
+              3
+            </div>
+          
+    </div>
+   
+    <div 
+      class="card" 
+      style="
+        height: 82mm;
+        width: 59mm;
+        margin-bottom: 2mm;
+        margin-right: 2mm;
+      "
+    >
+      
+            <div class="card-section-name">
+              Bodyguard Bot
+            </div>
+          
+            <div class="card-section-type">
+              Mech
+            </div>
+          
+            <div class="card-section-value">
+              1
+            </div>
+          
+            <div class="card-section-text">
+              If another unit you control would battle, this can take its place
+            </div>
+          
+            <div class="card-section-attack">
+              3
+            </div>
+          
+            <div class="card-section-defense">
+              3
+            </div>
+          
+    </div>
+   
+    <div 
+      class="card" 
+      style="
+        height: 82mm;
+        width: 59mm;
+        margin-bottom: 2mm;
+        margin-right: 2mm;
+      "
+    >
+      
+            <div class="card-section-name">
+              Power Harvester
+            </div>
+          
+            <div class="card-section-type">
+              Mech
+            </div>
+          
+            <div class="card-section-value">
+              2
+            </div>
+          
+            <div class="card-section-text">
+              When this destroys a mech, untap a machine
+            </div>
+          
+            <div class="card-section-attack">
+              7
+            </div>
+          
+            <div class="card-section-defense">
+              9
+            </div>
+          
+    </div>
+   
+    <div 
+      class="card" 
+      style="
+        height: 82mm;
+        width: 59mm;
+        margin-bottom: 2mm;
+        margin-right: 2mm;
+      "
+    >
+      
+            <div class="card-section-name">
+              Foreteller
+            </div>
+          
+            <div class="card-section-type">
+              Mage
+            </div>
+          
+            <div class="card-section-value">
+              1
+            </div>
+          
+            <div class="card-section-text">
+              Launch: Scry 2
+            </div>
+          
+            <div class="card-section-attack">
+              1
+            </div>
+          
+            <div class="card-section-defense">
+              4
+            </div>
+          
+    </div>
+  
+    </div>
+  
+    <div 
+      class="page page-1"
+      style="
+        height: 282mm;
+        width: 216mm;
+        max-height: 282mm;
+        max-width: 216mm;
+        padding: 5mm;
+      "
+    >
+      
+    <div 
+      class="card" 
+      style="
+        height: 82mm;
+        width: 59mm;
+        margin-bottom: 2mm;
+        margin-right: 2mm;
+      "
+    >
+      
+            <div class="card-section-name">
+              Acolyte Golemancer
+            </div>
+          
+            <div class="card-section-type">
+              Mage
+            </div>
+          
+            <div class="card-section-value">
+              1
+            </div>
+          
+            <div class="card-section-text">
+              Launch: Burn 1 scrap. Summon a 2/2 golem.
+            </div>
+          
+            <div class="card-section-attack">
+              1
+            </div>
+          
+            <div class="card-section-defense">
+              4
+            </div>
+          
+    </div>
+   
+    <div 
+      class="card" 
+      style="
+        height: 82mm;
+        width: 59mm;
+        margin-bottom: 2mm;
+        margin-right: 2mm;
+      "
+    >
+      
+            <div class="card-section-name">
+              Arch Golemancer
+            </div>
+          
+            <div class="card-section-type">
+              Mage
+            </div>
+          
+            <div class="card-section-value">
+              1
+            </div>
+          
+            <div class="card-section-text">
+              Tap: Burn 1 scrap. Summon a 1/1 golem.
+            </div>
+          
+            <div class="card-section-attack">
+              2
+            </div>
+          
+            <div class="card-section-defense">
+              4
+            </div>
+          
+    </div>
+   
+    <div 
+      class="card" 
+      style="
+        height: 82mm;
+        width: 59mm;
+        margin-bottom: 2mm;
+        margin-right: 2mm;
+      "
+    >
+      
+            <div class="card-section-name">
+              Reality Shifter
+            </div>
+          
+            <div class="card-section-type">
+              Mage
+            </div>
+          
+            <div class="card-section-value">
+              1
+            </div>
+          
+            <div class="card-section-text">
+              Launch: Swap a target's attack and defense
+            </div>
+          
+            <div class="card-section-attack">
+              1
+            </div>
+          
+            <div class="card-section-defense">
+              3
+            </div>
+          
+    </div>
+   
+    <div 
+      class="card" 
+      style="
+        height: 82mm;
+        width: 59mm;
+        margin-bottom: 2mm;
+        margin-right: 2mm;
+      "
+    >
+      
+            <div class="card-section-name">
+              Space Hulk
+            </div>
+          
+            <div class="card-section-type">
+              Mech
+            </div>
+          
+            <div class="card-section-value">
+              4
+            </div>
+          
+            <div class="card-section-text">
+              Roll. Seek that many cards in your deck.
+            </div>
+          
+            <div class="card-section-attack">
+              6
+            </div>
+          
+            <div class="card-section-defense">
+              20
+            </div>
+          
+    </div>
+   
+    <div 
+      class="card" 
+      style="
+        height: 82mm;
+        width: 59mm;
+        margin-bottom: 2mm;
+        margin-right: 2mm;
+      "
+    >
+      
+            <div class="card-section-name">
+              Sabateur Sorcerer
+            </div>
+          
+            <div class="card-section-type">
+              Mage
+            </div>
+          
+            <div class="card-section-value">
+              1
+            </div>
+          
+            <div class="card-section-text">
+              Launch: Your opponent scraps 3.
+            </div>
+          
+            <div class="card-section-attack">
+              4
+            </div>
+          
+            <div class="card-section-defense">
+              3
+            </div>
+          
+    </div>
+   
+    <div 
+      class="card" 
+      style="
+        height: 82mm;
+        width: 59mm;
+        margin-bottom: 2mm;
+        margin-right: 2mm;
+      "
+    >
+      
+            <div class="card-section-name">
+              Necro-engineer
+            </div>
+          
+            <div class="card-section-type">
+              Mage
+            </div>
+          
+            <div class="card-section-value">
+              1
+            </div>
+          
+            <div class="card-section-text">
+              Can be sent to the scrapheap
+            </div>
+          
+            <div class="card-section-attack">
+              2
+            </div>
+          
+            <div class="card-section-defense">
+              4
+            </div>
+          
+    </div>
+   
+    <div 
+      class="card" 
+      style="
+        height: 82mm;
+        width: 59mm;
+        margin-bottom: 2mm;
+        margin-right: 2mm;
+      "
+    >
+      
+            <div class="card-section-name">
+              Spiderbot
+            </div>
+          
+            <div class="card-section-type">
+              Mech
+            </div>
+          
+            <div class="card-section-value">
+              1
+            </div>
+          
+            <div class="card-section-text">
+              Shutdown: Summon a 1/1 bot.
+            </div>
+          
+            <div class="card-section-attack">
+              1
+            </div>
+          
+            <div class="card-section-defense">
+              1
+            </div>
+          
+    </div>
+   
+    <div 
+      class="card" 
+      style="
+        height: 82mm;
+        width: 59mm;
+        margin-bottom: 2mm;
+        margin-right: 2mm;
+      "
+    >
+      
+            <div class="card-section-name">
+              Anti-mech Alarmist
+            </div>
+          
+            <div class="card-section-type">
+              Mage
+            </div>
+          
+            <div class="card-section-value">
+              1
+            </div>
+          
+            <div class="card-section-text">
+              Launch: If you have no mechs in your scrapheap, draw 2 cards.
+            </div>
+          
+            <div class="card-section-attack">
+              1
+            </div>
+          
+            <div class="card-section-defense">
+              2
+            </div>
+          
+    </div>
+   
+    <div 
+      class="card" 
+      style="
+        height: 82mm;
+        width: 59mm;
+        margin-bottom: 2mm;
+        margin-right: 2mm;
+      "
+    >
+      
+            <div class="card-section-name">
+              Overclocked Exterminator
+            </div>
+          
+            <div class="card-section-type">
+              Mech
+            </div>
+          
+            <div class="card-section-value">
+              3
+            </div>
+          
+            <div class="card-section-text">
+              Sacrifice a component before attacking
+            </div>
+          
+            <div class="card-section-attack">
+              30
+            </div>
+          
+            <div class="card-section-defense">
+              10
+            </div>
+          
+    </div>
+  
+    </div>
+  
+    <div 
+      class="page page-2"
+      style="
+        height: 282mm;
+        width: 216mm;
+        max-height: 282mm;
+        max-width: 216mm;
+        padding: 5mm;
+      "
+    >
+      
+    <div 
+      class="card" 
+      style="
+        height: 82mm;
+        width: 59mm;
+        margin-bottom: 2mm;
+        margin-right: 2mm;
+      "
+    >
+      
+            <div class="card-section-name">
+              Rusting gargantuan
+            </div>
+          
+            <div class="card-section-type">
+              Mech
+            </div>
+          
+            <div class="card-section-value">
+              1
+            </div>
+          
+            <div class="card-section-text">
+              Has -1/-1 for each scrap in your scraphead
+            </div>
+          
+            <div class="card-section-attack">
+              10
+            </div>
+          
+            <div class="card-section-defense">
+              10
+            </div>
+          
+    </div>
+   
+    <div 
+      class="card" 
+      style="
+        height: 82mm;
+        width: 59mm;
+        margin-bottom: 2mm;
+        margin-right: 2mm;
+      "
+    >
+      
+            <div class="card-section-name">
+              Railgun Raptor
+            </div>
+          
+            <div class="card-section-type">
+              Mech
+            </div>
+          
+            <div class="card-section-value">
+              2
+            </div>
+          
+            <div class="card-section-text">
+              When this attacks, test X, where X is this unit's attack. Destroy the target unit.
+            </div>
+          
+            <div class="card-section-attack">
+              6
+            </div>
+          
+            <div class="card-section-defense">
+              9
+            </div>
+          
+    </div>
+   
+    <div 
+      class="card" 
+      style="
+        height: 82mm;
+        width: 59mm;
+        margin-bottom: 2mm;
+        margin-right: 2mm;
+      "
+    >
+      
+            <div class="card-section-name">
+              Scrap Golem
+            </div>
+          
+            <div class="card-section-type">
+              Mech
+            </div>
+          
+            <div class="card-section-value">
+              1
+            </div>
+          
+            <div class="card-section-text">
+              X is the number of scrap in your scrapheap.
+            </div>
+          
+            <div class="card-section-attack">
+              X
+            </div>
+          
+            <div class="card-section-defense">
+              X
+            </div>
+          
+    </div>
+   
+    <div 
+      class="card" 
+      style="
+        height: 82mm;
+        width: 59mm;
+        margin-bottom: 2mm;
+        margin-right: 2mm;
+      "
+    >
+      
+            <div class="card-section-name">
+              Bomb Bot
+            </div>
+          
+            <div class="card-section-type">
+              Mech
+            </div>
+          
+            <div class="card-section-value">
+              1
+            </div>
+          
+            <div class="card-section-text">
+              Shutdown: Deal 3 to a target unit.
+            </div>
+          
+            <div class="card-section-attack">
+              1
+            </div>
+          
+            <div class="card-section-defense">
+              1
+            </div>
+          
+    </div>
+   
+    <div 
+      class="card" 
+      style="
+        height: 82mm;
+        width: 59mm;
+        margin-bottom: 2mm;
+        margin-right: 2mm;
+      "
+    >
+      
+            <div class="card-section-name">
+              Mobile Factory
+            </div>
+          
+            <div class="card-section-type">
+              Mech
+            </div>
+          
+            <div class="card-section-value">
+              2
+            </div>
+          
+            <div class="card-section-text">
+              Tap: Scrap 1. Draw a card.
+            </div>
+          
+            <div class="card-section-attack">
+              2
+            </div>
+          
+            <div class="card-section-defense">
+              7
+            </div>
+          
+    </div>
+   
+    <div 
+      class="card" 
+      style="
+        height: 82mm;
+        width: 59mm;
+        margin-bottom: 2mm;
+        margin-right: 2mm;
+      "
+    >
+      
+            <div class="card-section-name">
+              Elissar, Paxfront Tribune
+            </div>
+          
+            <div class="card-section-type">
+              Mage
+            </div>
+          
+            <div class="card-section-value">
+              2
+            </div>
+          
+            <div class="card-section-text">
+              Tap: Deal 2 damage to a mech.
+            </div>
+          
+            <div class="card-section-attack">
+              7
+            </div>
+          
+            <div class="card-section-defense">
+              4
+            </div>
+          
+    </div>
+   
+    <div 
+      class="card" 
+      style="
+        height: 82mm;
+        width: 59mm;
+        margin-bottom: 2mm;
+        margin-right: 2mm;
+      "
+    >
+      
+            <div class="card-section-name">
+              Paxfron Emissary
+            </div>
+          
+            <div class="card-section-type">
+              Mage
+            </div>
+          
+            <div class="card-section-value">
+              1
+            </div>
+          
+            <div class="card-section-text">
+              Launch: Give a mech +2 attack.
+            </div>
+          
+            <div class="card-section-attack">
+              3
+            </div>
+          
+            <div class="card-section-defense">
+              4
+            </div>
+          
+    </div>
+   
+    <div 
+      class="card" 
+      style="
+        height: 82mm;
+        width: 59mm;
+        margin-bottom: 2mm;
+        margin-right: 2mm;
+      "
+    >
+      
+            <div class="card-section-name">
+              Samsar Repair Drone
+            </div>
+          
+            <div class="card-section-type">
+              Mech
+            </div>
+          
+            <div class="card-section-value">
+              1
+            </div>
+          
+            <div class="card-section-text">
+              Launch: Phase in a mech.
+            </div>
+          
+            <div class="card-section-attack">
+              2
+            </div>
+          
+            <div class="card-section-defense">
+              1
+            </div>
+          
+    </div>
+   
+    <div 
+      class="card" 
+      style="
+        height: 82mm;
+        width: 59mm;
+        margin-bottom: 2mm;
+        margin-right: 2mm;
+      "
+    >
+      
+            <div class="card-section-name">
+              Samsar Peace Keeper
+            </div>
+          
+            <div class="card-section-type">
+              Mech
+            </div>
+          
+            <div class="card-section-value">
+              1
+            </div>
+          
+            <div class="card-section-instant">
+              true
+            </div>
+          
+            <div class="card-section-text">
+              Launch: Target doesn't take or deal damage this turn.
+            </div>
+          
+            <div class="card-section-attack">
+              1
+            </div>
+          
+            <div class="card-section-defense">
+              3
+            </div>
+          
+    </div>
+  
+    </div>
+  
+    <div 
+      class="page page-3"
+      style="
+        height: 282mm;
+        width: 216mm;
+        max-height: 282mm;
+        max-width: 216mm;
+        padding: 5mm;
+      "
+    >
+      
+    <div 
+      class="card" 
+      style="
+        height: 82mm;
+        width: 59mm;
+        margin-bottom: 2mm;
+        margin-right: 2mm;
+      "
+    >
+      
+            <div class="card-section-name">
+              Samsar Miracle Worker
+            </div>
+          
+            <div class="card-section-type">
+              Mech
+            </div>
+          
+            <div class="card-section-value">
+              1
+            </div>
+          
+            <div class="card-section-text">
+              Tap: Test 5. Draw 1.
+            </div>
+          
+            <div class="card-section-attack">
+              1
+            </div>
+          
+            <div class="card-section-defense">
+              2
+            </div>
+          
+    </div>
+   
+    <div 
+      class="card" 
+      style="
+        height: 82mm;
+        width: 59mm;
+        margin-bottom: 2mm;
+        margin-right: 2mm;
+      "
+    >
+      
+            <div class="card-section-name">
+              Derelict Monocraft
+            </div>
+          
+            <div class="card-section-type">
+              Mech
+            </div>
+          
+            <div class="card-section-value">
+              1
+            </div>
+          
+            <div class="card-section-text">
+              When this attacks, fault 1: Destroy this.
+            </div>
+          
+            <div class="card-section-attack">
+              6
+            </div>
+          
+            <div class="card-section-defense">
+              3
+            </div>
+          
+    </div>
+   
+    <div 
+      class="card" 
+      style="
+        height: 82mm;
+        width: 59mm;
+        margin-bottom: 2mm;
+        margin-right: 2mm;
+      "
+    >
+      
+            <div class="card-section-name">
+              Vrak Supply Ship
+            </div>
+          
+            <div class="card-section-type">
+              Mech
+            </div>
+          
+            <div class="card-section-value">
+              1
+            </div>
+          
+            <div class="card-section-text">
+              Tap: Draw 2.
+When this attacks, fault 2: Destroy this.
+            </div>
+          
+            <div class="card-section-attack">
+              4
+            </div>
+          
+            <div class="card-section-defense">
+              9
+            </div>
+          
+    </div>
+   
+    <div 
+      class="card" 
+      style="
+        height: 82mm;
+        width: 59mm;
+        margin-bottom: 2mm;
+        margin-right: 2mm;
+      "
+    >
+      
+            <div class="card-section-name">
+              Imrya
+            </div>
+          
+            <div class="card-section-type">
+              Mech
+            </div>
+          
+            <div class="card-section-value">
+              3
+            </div>
+          
+            <div class="card-section-text">
+              Tap: Target mech takes no damage this turn.
+            </div>
+          
+            <div class="card-section-attack">
+              3
+            </div>
+          
+            <div class="card-section-defense">
+              12
+            </div>
+          
+    </div>
+   
+    <div 
+      class="card" 
+      style="
+        height: 82mm;
+        width: 59mm;
+        margin-bottom: 2mm;
+        margin-right: 2mm;
+      "
+    >
+      
+            <div class="card-section-name">
+              Vrak Assault Unit
+            </div>
+          
+            <div class="card-section-type">
+              Mech
+            </div>
+          
+            <div class="card-section-value">
+              1
+            </div>
+          
+            <div class="card-section-text">
+              When this attack, fault 4. Destroy this.
+            </div>
+          
+            <div class="card-section-attack">
+              5
+            </div>
+          
+            <div class="card-section-defense">
+              4
+            </div>
+          
+    </div>
+   
+    <div 
+      class="card" 
+      style="
+        height: 82mm;
+        width: 59mm;
+        margin-bottom: 2mm;
+        margin-right: 2mm;
+      "
+    >
+      
+            <div class="card-section-name">
+              Scrap Melder
+            </div>
+          
+            <div class="card-section-type">
+              Mage
+            </div>
+          
+            <div class="card-section-value">
+              1
+            </div>
+          
+            <div class="card-section-text">
+              Tap: Pass a test.
+            </div>
+          
+            <div class="card-section-attack">
+              2
+            </div>
+          
+            <div class="card-section-defense">
+              2
+            </div>
+          
+    </div>
+   
+    <div 
+      class="card" 
+      style="
+        height: 82mm;
+        width: 59mm;
+        margin-bottom: 2mm;
+        margin-right: 2mm;
+      "
+    >
+      
+            <div class="card-section-name">
+              Bombardments
+            </div>
+          
+            <div class="card-section-type">
+              Technology
+            </div>
+          
+            <div class="card-section-text">
+              Deal 1 damage to all enemies
+            </div>
+          
+    </div>
+   
+    <div 
+      class="card" 
+      style="
+        height: 82mm;
+        width: 59mm;
+        margin-bottom: 2mm;
+        margin-right: 2mm;
+      "
+    >
+      
+            <div class="card-section-name">
+              Manifest Flesh
+            </div>
+          
+            <div class="card-section-type">
+              Spell
+            </div>
+          
+            <div class="card-section-upgrade">
+              true
+            </div>
+          
+            <div class="card-section-text">
+              Target is no longer a mech
+            </div>
+          
+            <div class="card-section-attack">
+              +1
+            </div>
+          
+            <div class="card-section-defense">
+              -1
+            </div>
+          
+    </div>
+   
+    <div 
+      class="card" 
+      style="
+        height: 82mm;
+        width: 59mm;
+        margin-bottom: 2mm;
+        margin-right: 2mm;
+      "
+    >
+      
+            <div class="card-section-name">
+              Curse of Steel
+            </div>
+          
+            <div class="card-section-type">
+              Spell
+            </div>
+          
+            <div class="card-section-upgrade">
+              true
+            </div>
+          
+            <div class="card-section-attack">
+              -2
+            </div>
+          
+            <div class="card-section-defense">
+              -2
+            </div>
+          
+    </div>
+  
+    </div>
+  
+    <div 
+      class="page page-4"
+      style="
+        height: 282mm;
+        width: 216mm;
+        max-height: 282mm;
+        max-width: 216mm;
+        padding: 5mm;
+      "
+    >
+      
+    <div 
+      class="card" 
+      style="
+        height: 82mm;
+        width: 59mm;
+        margin-bottom: 2mm;
+        margin-right: 2mm;
+      "
+    >
+      
+            <div class="card-section-name">
+              Drop-pod Mech
+            </div>
+          
+            <div class="card-section-type">
+              Mech
+            </div>
+          
+            <div class="card-section-instant">
+              true
+            </div>
+          
+            <div class="card-section-value">
+              1
+            </div>
+          
+            <div class="card-section-text">
+              Fault 1: Phase this out
+            </div>
+          
+            <div class="card-section-attack">
+              4
+            </div>
+          
+            <div class="card-section-defense">
+              4
+            </div>
+          
+    </div>
+   
+    <div 
+      class="card" 
+      style="
+        height: 82mm;
+        width: 59mm;
+        margin-bottom: 2mm;
+        margin-right: 2mm;
+      "
+    >
+      
+            <div class="card-section-name">
+              Advanced Blueprints
+            </div>
+          
+            <div class="card-section-type">
+              Technology
+            </div>
+          
+            <div class="card-section-text">
+              Seek a level 3+ mech
+            </div>
+          
+    </div>
+  
+    </div>
+  
+      </div>
+    </body>
+  
+    </html>
+  
