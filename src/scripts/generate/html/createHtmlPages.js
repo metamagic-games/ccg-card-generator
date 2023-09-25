@@ -1,3 +1,5 @@
+import marked from 'marked';
+
 const generateCard = (card, dimensions) => {
   return `
     <div 
@@ -15,7 +17,7 @@ const generateCard = (card, dimensions) => {
 
           return `
             <div class="card-section-${key}">
-              ${value}
+              ${marked(value)}
             </div>
           `;
         })

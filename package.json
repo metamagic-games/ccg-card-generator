@@ -45,7 +45,8 @@
   "dependencies": {
     "copyfiles": "^2.4.1",
     "fs": "0.0.1-security",
-    "html-pdf-chrome": "^0.8.4"
+    "html-pdf-chrome": "^0.8.4",
+    "marked": "^9.0.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.22.15",

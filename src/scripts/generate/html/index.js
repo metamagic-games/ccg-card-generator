@@ -40,6 +40,10 @@ const generateHTML = (cards, styles, dimensions, htmlGenerator=createHtmlPages) 
     <html>
       <head>
         <style>
+          @page {
+            size: ${dimensions.page.width}mm ${dimensions.page.height}mm;
+          }
+
           ${css}
         </style>
       </head>
