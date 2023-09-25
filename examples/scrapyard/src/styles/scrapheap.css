@@ -1,13 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap');
 
-@page {
-  size: 210mm 297mm;
-}
-
 * {
   box-sizing: border-box;
 
-  --background-color: #f9f9f9;
+  --background-color: #fff;
+  --background-color-darker: #efefef;
+
   --border-color: black;
 
   font-family: "Orbitron", monospace;
@@ -15,6 +13,11 @@
 
 .document {
   margin: 0;
+}
+
+p {
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 .pages {
@@ -48,6 +51,7 @@
 }
 
 .card .card-section-name {
+  background: var(--background-color-darker);
   font-weight: bold;
   max-width: 80%;
   position: absolute;
@@ -59,6 +63,7 @@
 }
 
 .card .card-section-type {
+  background: var(--background-color-darker);
   position: absolute;
   left: -1px;
   top: 30px;
@@ -68,6 +73,7 @@
 }
 
 .card .card-section-value {
+  background: var(--background-color-darker);
   position: absolute;
   left: -1px;
   top: 50px;
@@ -104,7 +110,7 @@
   right: 10px;
   border: 1px solid black;
   border-radius: 2px;
-  background: #efefef;
+  background: var(--background-color-darker);
   min-height: 25%;
   text-align: center;
   padding: 0.5em;
@@ -118,7 +124,7 @@
   position: absolute;
   bottom: 5px;
   padding: 0.25em 0;
-  background: #efefef;
+  background: var(--background-color-darker);
   width: 30px;
   height: 30px;
   text-align: center;

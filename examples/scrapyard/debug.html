@@ -2,16 +2,18 @@
     <html>
       <head>
         <style>
-          @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap');
+          @page {
+            size: 210mm 297mm;
+          }
 
-@page {
-  size: 210mm 297mm;
-}
+          @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap');
 
 * {
   box-sizing: border-box;
 
-  --background-color: #f9f9f9;
+  --background-color: #fff;
+  --background-color-darker: #efefef;
+
   --border-color: black;
 
   font-family: "Orbitron", monospace;
@@ -19,6 +21,11 @@
 
 .document {
   margin: 0;
+}
+
+p {
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 .pages {
@@ -52,6 +59,7 @@
 }
 
 .card .card-section-name {
+  background: var(--background-color-darker);
   font-weight: bold;
   max-width: 80%;
   position: absolute;
@@ -63,6 +71,7 @@
 }
 
 .card .card-section-type {
+  background: var(--background-color-darker);
   position: absolute;
   left: -1px;
   top: 30px;
@@ -72,6 +81,7 @@
 }
 
 .card .card-section-value {
+  background: var(--background-color-darker);
   position: absolute;
   left: -1px;
   top: 50px;
@@ -108,7 +118,7 @@
   right: 10px;
   border: 1px solid black;
   border-radius: 2px;
-  background: #efefef;
+  background: var(--background-color-darker);
   min-height: 25%;
   text-align: center;
   padding: 0.5em;
@@ -122,7 +132,7 @@
   position: absolute;
   bottom: 5px;
   padding: 0.25em 0;
-  background: #efefef;
+  background: var(--background-color-darker);
   width: 30px;
   height: 30px;
   text-align: center;
@@ -165,27 +175,33 @@
     >
       
             <div class="card-section-name">
-              Scrap Hulk
+              <p>Scrap Hulk</p>
+
             </div>
           
             <div class="card-section-type">
-              Mech
+              <p>Mech</p>
+
             </div>
           
             <div class="card-section-value">
-              1
+              <p>1</p>
+
             </div>
           
             <div class="card-section-text">
-              ⛢ Launch: Roll. This has that much health.
+              <p><strong>⛢ Launch:</strong> Roll. This has that much health.</p>
+
             </div>
           
             <div class="card-section-attack">
-              3
+              <p>3</p>
+
             </div>
           
             <div class="card-section-defense">
-              *
+              <p>X</p>
+
             </div>
           
     </div>
@@ -201,27 +217,33 @@
     >
       
             <div class="card-section-name">
-              Unstable Laz-Unit
+              <p>Unstable Laz-Unit</p>
+
             </div>
           
             <div class="card-section-type">
-              Mech
+              <p>Mech</p>
+
             </div>
           
             <div class="card-section-value">
-              1
+              <p>1</p>
+
             </div>
           
             <div class="card-section-text">
-              Roll at the start of your turn. This has that much attack until your next turn.
+              <p>Roll at the start of your turn. This has that much attack until your next turn.</p>
+
             </div>
           
             <div class="card-section-attack">
-              *
+              <p>X</p>
+
             </div>
           
             <div class="card-section-defense">
-              2
+              <p>2</p>
+
             </div>
           
     </div>
@@ -237,27 +259,33 @@
     >
       
             <div class="card-section-name">
-              Smoking Hulk
+              <p>Smoking Hulk</p>
+
             </div>
           
             <div class="card-section-type">
-              Mech
+              <p>Mech</p>
+
             </div>
           
             <div class="card-section-value">
-              2
+              <p>2</p>
+
             </div>
           
             <div class="card-section-text">
-              You may burn 1 as a component to summon this
+              <p>You may burn 1 as a component to summon this</p>
+
             </div>
           
             <div class="card-section-attack">
-              6
+              <p>6</p>
+
             </div>
           
             <div class="card-section-defense">
-              6
+              <p>6</p>
+
             </div>
           
     </div>
@@ -273,27 +301,33 @@
     >
       
             <div class="card-section-name">
-              Prototype
+              <p>Prototype</p>
+
             </div>
           
             <div class="card-section-type">
-              Mech
+              <p>Mech</p>
+
             </div>
           
             <div class="card-section-value">
-              1
+              <p>1</p>
+
             </div>
           
             <div class="card-section-text">
-              When used to summon a mech, this counts as two components
+              <p>When used to summon a mech, this counts as two components</p>
+
             </div>
           
             <div class="card-section-attack">
-              1
+              <p>1</p>
+
             </div>
           
             <div class="card-section-defense">
-              1
+              <p>1</p>
+
             </div>
           
     </div>
@@ -309,23 +343,28 @@
     >
       
             <div class="card-section-name">
-              Warmachine
+              <p>Warmachine</p>
+
             </div>
           
             <div class="card-section-type">
-              Mech
+              <p>Mech</p>
+
             </div>
           
             <div class="card-section-value">
-              2
+              <p>2</p>
+
             </div>
           
             <div class="card-section-attack">
-              10
+              <p>10</p>
+
             </div>
           
             <div class="card-section-defense">
-              10
+              <p>10</p>
+
             </div>
           
     </div>
@@ -341,27 +380,33 @@
     >
       
             <div class="card-section-name">
-              Ferromancer
+              <p>Ferromancer</p>
+
             </div>
           
             <div class="card-section-type">
-              Mage
+              <p>Mage</p>
+
             </div>
           
             <div class="card-section-value">
-              1
+              <p>1</p>
+
             </div>
           
             <div class="card-section-text">
-              Sacrifice: Destroy a mech
+              <p>Sacrifice: Destroy a mech</p>
+
             </div>
           
             <div class="card-section-attack">
-              2
+              <p>2</p>
+
             </div>
           
             <div class="card-section-defense">
-              3
+              <p>3</p>
+
             </div>
           
     </div>
@@ -377,27 +422,33 @@
     >
       
             <div class="card-section-name">
-              Bodyguard Bot
+              <p>Bodyguard Bot</p>
+
             </div>
           
             <div class="card-section-type">
-              Mech
+              <p>Mech</p>
+
             </div>
           
             <div class="card-section-value">
-              1
+              <p>1</p>
+
             </div>
           
             <div class="card-section-text">
-              If another unit you control would battle, this can take its place
+              <p>If another unit you control would battle, this can take its place</p>
+
             </div>
           
             <div class="card-section-attack">
-              3
+              <p>3</p>
+
             </div>
           
             <div class="card-section-defense">
-              3
+              <p>3</p>
+
             </div>
           
     </div>
@@ -413,27 +464,33 @@
     >
       
             <div class="card-section-name">
-              Power Harvester
+              <p>Power Harvester</p>
+
             </div>
           
             <div class="card-section-type">
-              Mech
+              <p>Mech</p>
+
             </div>
           
             <div class="card-section-value">
-              2
+              <p>2</p>
+
             </div>
           
             <div class="card-section-text">
-              When this destroys a mech, untap a machine
+              <p>When this destroys a mech, untap a machine</p>
+
             </div>
           
             <div class="card-section-attack">
-              7
+              <p>7</p>
+
             </div>
           
             <div class="card-section-defense">
-              9
+              <p>9</p>
+
             </div>
           
     </div>
@@ -449,27 +506,33 @@
     >
       
             <div class="card-section-name">
-              Foreteller
+              <p>Foreteller</p>
+
             </div>
           
             <div class="card-section-type">
-              Mage
+              <p>Mage</p>
+
             </div>
           
             <div class="card-section-value">
-              1
+              <p>1</p>
+
             </div>
           
             <div class="card-section-text">
-              ⛢ Launch: Scry 2
+              <p><strong>⛢ Launch:</strong> Scry 2</p>
+
             </div>
           
             <div class="card-section-attack">
-              1
+              <p>1</p>
+
             </div>
           
             <div class="card-section-defense">
-              4
+              <p>4</p>
+
             </div>
           
     </div>
@@ -498,27 +561,33 @@
     >
       
             <div class="card-section-name">
-              Acolyte Golemancer
+              <p>Acolyte Golemancer</p>
+
             </div>
           
             <div class="card-section-type">
-              Mage
+              <p>Mage</p>
+
             </div>
           
             <div class="card-section-value">
-              1
+              <p>1</p>
+
             </div>
           
             <div class="card-section-text">
-              ⛢ Launch: Burn 1 scrap. Summon a 2/2 golem.
+              <p><strong>⛢ Launch:</strong> Burn 1 scrap. Summon a 2/2 golem.</p>
+
             </div>
           
             <div class="card-section-attack">
-              1
+              <p>1</p>
+
             </div>
           
             <div class="card-section-defense">
-              4
+              <p>4</p>
+
             </div>
           
     </div>
@@ -534,27 +603,33 @@
     >
       
             <div class="card-section-name">
-              Arch Golemancer
+              <p>Arch Golemancer</p>
+
             </div>
           
             <div class="card-section-type">
-              Mage
+              <p>Mage</p>
+
             </div>
           
             <div class="card-section-value">
-              1
+              <p>1</p>
+
             </div>
           
             <div class="card-section-text">
-              ☇ Burn 1 scrap. Summon a 1/1 golem.
+              <p>☇ Burn 1 scrap. Summon a 1/1 golem.</p>
+
             </div>
           
             <div class="card-section-attack">
-              2
+              <p>2</p>
+
             </div>
           
             <div class="card-section-defense">
-              4
+              <p>4</p>
+
             </div>
           
     </div>
@@ -570,27 +645,33 @@
     >
       
             <div class="card-section-name">
-              Reality Shifter
+              <p>Reality Shifter</p>
+
             </div>
           
             <div class="card-section-type">
-              Mage
+              <p>Mage</p>
+
             </div>
           
             <div class="card-section-value">
-              1
+              <p>1</p>
+
             </div>
           
             <div class="card-section-text">
-              ⛢ Launch: Swap a target's attack and defense
+              <p><strong>⛢ Launch:</strong> Swap a target&#39;s attack and defense</p>
+
             </div>
           
             <div class="card-section-attack">
-              1
+              <p>1</p>
+
             </div>
           
             <div class="card-section-defense">
-              3
+              <p>3</p>
+
             </div>
           
     </div>
@@ -606,27 +687,33 @@
     >
       
             <div class="card-section-name">
-              Space Hulk
+              <p>Space Hulk</p>
+
             </div>
           
             <div class="card-section-type">
-              Mech
+              <p>Mech</p>
+
             </div>
           
             <div class="card-section-value">
-              4
+              <p>4</p>
+
             </div>
           
             <div class="card-section-text">
-              Roll. Seek that many cards in your deck.
+              <p>☇ Roll. Seek that many cards in your deck.</p>
+
             </div>
           
             <div class="card-section-attack">
-              6
+              <p>6</p>
+
             </div>
           
             <div class="card-section-defense">
-              20
+              <p>20</p>
+
             </div>
           
     </div>
@@ -642,27 +729,33 @@
     >
       
             <div class="card-section-name">
-              Sabateur Sorcerer
+              <p>Sabateur Sorcerer</p>
+
             </div>
           
             <div class="card-section-type">
-              Mage
+              <p>Mage</p>
+
             </div>
           
             <div class="card-section-value">
-              1
+              <p>1</p>
+
             </div>
           
             <div class="card-section-text">
-              ⛢ Launch: Your opponent scraps 3.
+              <p><strong>⛢ Launch:</strong> Your opponent scraps 3.</p>
+
             </div>
           
             <div class="card-section-attack">
-              4
+              <p>4</p>
+
             </div>
           
             <div class="card-section-defense">
-              3
+              <p>3</p>
+
             </div>
           
     </div>
@@ -678,23 +771,28 @@
     >
       
             <div class="card-section-name">
-              Necro-engineer
+              <p>Necro-engineer</p>
+
             </div>
           
             <div class="card-section-type">
-              Mage Mech
+              <p>Mage Mech</p>
+
             </div>
           
             <div class="card-section-value">
-              1
+              <p>1</p>
+
             </div>
           
             <div class="card-section-attack">
-              2
+              <p>2</p>
+
             </div>
           
             <div class="card-section-defense">
-              4
+              <p>4</p>
+
             </div>
           
     </div>
@@ -710,27 +808,33 @@
     >
       
             <div class="card-section-name">
-              Spiderbot
+              <p>Spiderbot</p>
+
             </div>
           
             <div class="card-section-type">
-              Mech
+              <p>Mech</p>
+
             </div>
           
             <div class="card-section-value">
-              1
+              <p>1</p>
+
             </div>
           
             <div class="card-section-text">
-              ☠ Shutdown: Summon a 1/1 bot.
+              <p><strong>☠ Shutdown:</strong> Summon a 1/1 bot.</p>
+
             </div>
           
             <div class="card-section-attack">
-              1
+              <p>1</p>
+
             </div>
           
             <div class="card-section-defense">
-              1
+              <p>1</p>
+
             </div>
           
     </div>
@@ -746,27 +850,33 @@
     >
       
             <div class="card-section-name">
-              Anti-mech Alarmist
+              <p>Anti-mech Alarmist</p>
+
             </div>
           
             <div class="card-section-type">
-              Mage
+              <p>Mage</p>
+
             </div>
           
             <div class="card-section-value">
-              1
+              <p>1</p>
+
             </div>
           
             <div class="card-section-text">
-              ⛢ Launch: If you have no mechs in your scrapheap, draw 2 cards.
+              <p><strong>⛢ Launch:</strong> If you have no mechs in your scrapheap, draw 2 cards.</p>
+
             </div>
           
             <div class="card-section-attack">
-              1
+              <p>1</p>
+
             </div>
           
             <div class="card-section-defense">
-              2
+              <p>2</p>
+
             </div>
           
     </div>
@@ -782,27 +892,33 @@
     >
       
             <div class="card-section-name">
-              Overclocked Exterminator
+              <p>Overclocked Exterminator</p>
+
             </div>
           
             <div class="card-section-type">
-              Mech
+              <p>Mech</p>
+
             </div>
           
             <div class="card-section-value">
-              3
+              <p>3</p>
+
             </div>
           
             <div class="card-section-text">
-              Sacrifice a component before attacking
+              <p>Sacrifice a component before attacking</p>
+
             </div>
           
             <div class="card-section-attack">
-              30
+              <p>30</p>
+
             </div>
           
             <div class="card-section-defense">
-              10
+              <p>10</p>
+
             </div>
           
     </div>
@@ -831,27 +947,33 @@
     >
       
             <div class="card-section-name">
-              Rusting gargantuan
+              <p>Rusting gargantuan</p>
+
             </div>
           
             <div class="card-section-type">
-              Mech
+              <p>Mech</p>
+
             </div>
           
             <div class="card-section-value">
-              1
+              <p>1</p>
+
             </div>
           
             <div class="card-section-text">
-              Has -1/-1 for each scrap in your scraphead
+              <p>Has -1/-1 for each scrap in your scraphead</p>
+
             </div>
           
             <div class="card-section-attack">
-              10
+              <p>10</p>
+
             </div>
           
             <div class="card-section-defense">
-              10
+              <p>10</p>
+
             </div>
           
     </div>
@@ -867,27 +989,33 @@
     >
       
             <div class="card-section-name">
-              Railgun Raptor
+              <p>Railgun Raptor</p>
+
             </div>
           
             <div class="card-section-type">
-              Mech
+              <p>Mech</p>
+
             </div>
           
             <div class="card-section-value">
-              2
+              <p>2</p>
+
             </div>
           
             <div class="card-section-text">
-              When this attacks, test X, where X is this unit's attack. Destroy the target unit.
+              <p>When this attacks, test X+, where X is this unit&#39;s attack. Destroy the target unit.</p>
+
             </div>
           
             <div class="card-section-attack">
-              6
+              <p>6</p>
+
             </div>
           
             <div class="card-section-defense">
-              9
+              <p>9</p>
+
             </div>
           
     </div>
@@ -903,27 +1031,33 @@
     >
       
             <div class="card-section-name">
-              Scrap Golem
+              <p>Scrap Golem</p>
+
             </div>
           
             <div class="card-section-type">
-              Mech
+              <p>Mech</p>
+
             </div>
           
             <div class="card-section-value">
-              1
+              <p>1</p>
+
             </div>
           
             <div class="card-section-text">
-              X is the number of scrap in your scrapheap.
+              <p>X is the number of scrap in your scrapheap.</p>
+
             </div>
           
             <div class="card-section-attack">
-              X
+              <p>X</p>
+
             </div>
           
             <div class="card-section-defense">
-              X
+              <p>X</p>
+
             </div>
           
     </div>
@@ -939,27 +1073,33 @@
     >
       
             <div class="card-section-name">
-              Bomb Bot
+              <p>Bomb Bot</p>
+
             </div>
           
             <div class="card-section-type">
-              Mech
+              <p>Mech</p>
+
             </div>
           
             <div class="card-section-value">
-              1
+              <p>1</p>
+
             </div>
           
             <div class="card-section-text">
-              ☠ Shutdown: Deal 3 to a target unit.
+              <p><strong>☠ Shutdown:</strong> Deal 3 to a target unit.</p>
+
             </div>
           
             <div class="card-section-attack">
-              1
+              <p>1</p>
+
             </div>
           
             <div class="card-section-defense">
-              1
+              <p>1</p>
+
             </div>
           
     </div>
@@ -975,27 +1115,33 @@
     >
       
             <div class="card-section-name">
-              Mobile Factory
+              <p>Mobile Factory</p>
+
             </div>
           
             <div class="card-section-type">
-              Mech
+              <p>Mech</p>
+
             </div>
           
             <div class="card-section-value">
-              2
+              <p>2</p>
+
             </div>
           
             <div class="card-section-text">
-              ☇ Scrap 1. Draw a card.
+              <p>☇ Scrap 1. Draw a card.</p>
+
             </div>
           
             <div class="card-section-attack">
-              2
+              <p>2</p>
+
             </div>
           
             <div class="card-section-defense">
-              7
+              <p>7</p>
+
             </div>
           
     </div>
@@ -1011,27 +1157,33 @@
     >
       
             <div class="card-section-name">
-              Elissar, Paxfront Tribune
+              <p>Elissar, Paxfront Tribune</p>
+
             </div>
           
             <div class="card-section-type">
-              Mage
+              <p>Mage</p>
+
             </div>
           
             <div class="card-section-value">
-              2
+              <p>2</p>
+
             </div>
           
             <div class="card-section-text">
-              ☇ Deal 2 damage to a mech.
+              <p>☇ Deal 2 damage to a mech.</p>
+
             </div>
           
             <div class="card-section-attack">
-              7
+              <p>7</p>
+
             </div>
           
             <div class="card-section-defense">
-              4
+              <p>4</p>
+
             </div>
           
     </div>
@@ -1047,27 +1199,33 @@
     >
       
             <div class="card-section-name">
-              Paxfron Emissary
+              <p>Paxfron Emissary</p>
+
             </div>
           
             <div class="card-section-type">
-              Mage
+              <p>Mage</p>
+
             </div>
           
             <div class="card-section-value">
-              1
+              <p>1</p>
+
             </div>
           
             <div class="card-section-text">
-              ⛢ Launch: Give a mech +2 attack.
+              <p><strong>⛢ Launch:</strong> Give a mech +2 attack.</p>
+
             </div>
           
             <div class="card-section-attack">
-              3
+              <p>3</p>
+
             </div>
           
             <div class="card-section-defense">
-              4
+              <p>4</p>
+
             </div>
           
     </div>
@@ -1083,27 +1241,33 @@
     >
       
             <div class="card-section-name">
-              Samsar Repair Drone
+              <p>Samsar Repair Drone</p>
+
             </div>
           
             <div class="card-section-type">
-              Mech
+              <p>Mech</p>
+
             </div>
           
             <div class="card-section-value">
-              1
+              <p>1</p>
+
             </div>
           
             <div class="card-section-text">
-              ⛢ Launch: Phase in a mech.
+              <p><strong>⛢ Launch:</strong> Phase in a mech.</p>
+
             </div>
           
             <div class="card-section-attack">
-              2
+              <p>2</p>
+
             </div>
           
             <div class="card-section-defense">
-              1
+              <p>1</p>
+
             </div>
           
     </div>
@@ -1119,31 +1283,38 @@
     >
       
             <div class="card-section-name">
-              Samsar Peace Keeper
+              <p>Samsar Peace Keeper</p>
+
             </div>
           
             <div class="card-section-type">
-              Mech
+              <p>Mech</p>
+
             </div>
           
             <div class="card-section-value">
-              1
+              <p>1</p>
+
             </div>
           
             <div class="card-section-instant">
-              true
+              <p>true</p>
+
             </div>
           
             <div class="card-section-text">
-              ⛢ Launch: Target doesn't take or deal damage this turn.
+              <p><strong>⛢ Launch:</strong> Target doesn&#39;t take or deal damage this turn.</p>
+
             </div>
           
             <div class="card-section-attack">
-              1
+              <p>1</p>
+
             </div>
           
             <div class="card-section-defense">
-              3
+              <p>3</p>
+
             </div>
           
     </div>
@@ -1172,101 +1343,33 @@
     >
       
             <div class="card-section-name">
-              Samsar Miracle Worker
-            </div>
-          
-            <div class="card-section-type">
-              Mech
-            </div>
-          
-            <div class="card-section-value">
-              1
-            </div>
-          
-            <div class="card-section-text">
-              ☇ Test 5. Draw 1.
-            </div>
-          
-            <div class="card-section-attack">
-              1
-            </div>
-          
-            <div class="card-section-defense">
-              2
-            </div>
-          
-    </div>
-   
-    <div 
-      class="card" 
-      style="
-        height: 88mm;
-        width: 63mm;
-        margin-bottom: 0mm;
-        margin-right: 0mm;
-      "
-    >
-      
-            <div class="card-section-name">
-              Derelict Monocraft
-            </div>
-          
-            <div class="card-section-type">
-              Mech
-            </div>
-          
-            <div class="card-section-value">
-              1
-            </div>
-          
-            <div class="card-section-text">
-              When this attacks, ⚠ fault 1: Destroy this.
-            </div>
-          
-            <div class="card-section-attack">
-              6
-            </div>
-          
-            <div class="card-section-defense">
-              3
-            </div>
-          
-    </div>
-   
-    <div 
-      class="card" 
-      style="
-        height: 88mm;
-        width: 63mm;
-        margin-bottom: 0mm;
-        margin-right: 0mm;
-      "
-    >
-      
-            <div class="card-section-name">
-              Vrak Supply Ship
-            </div>
-          
-            <div class="card-section-type">
-              Mech
-            </div>
-          
-            <div class="card-section-value">
-              1
-            </div>
-          
-            <div class="card-section-text">
-              ☇ Draw 2.
+              <p>Samsar Miracle Worker</p>
 
-When this attacks, ⚠ fault 2: Destroy this.
+            </div>
+          
+            <div class="card-section-type">
+              <p>Mech</p>
+
+            </div>
+          
+            <div class="card-section-value">
+              <p>1</p>
+
+            </div>
+          
+            <div class="card-section-text">
+              <p>☇ Test 5. Draw 1.</p>
+
             </div>
           
             <div class="card-section-attack">
-              4
+              <p>1</p>
+
             </div>
           
             <div class="card-section-defense">
-              9
+              <p>2</p>
+
             </div>
           
     </div>
@@ -1282,27 +1385,33 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Imrya
+              <p>Derelict Monocraft</p>
+
             </div>
           
             <div class="card-section-type">
-              Mech
+              <p>Mech</p>
+
             </div>
           
             <div class="card-section-value">
-              3
+              <p>1</p>
+
             </div>
           
             <div class="card-section-text">
-              ☇ Target mech takes no damage this turn.
+              <p>When this attacks, ⚠ fault 1: Destroy this.</p>
+
             </div>
           
             <div class="card-section-attack">
-              3
+              <p>6</p>
+
             </div>
           
             <div class="card-section-defense">
-              12
+              <p>3</p>
+
             </div>
           
     </div>
@@ -1318,27 +1427,33 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Vrak Assault Unit
+              <p>Vrak Supply Ship</p>
+
             </div>
           
             <div class="card-section-type">
-              Mech
+              <p>Mech</p>
+
             </div>
           
             <div class="card-section-value">
-              1
+              <p>2</p>
+
             </div>
           
             <div class="card-section-text">
-              When this attack, ⚠ fault 4. Destroy this.
+              <p>☇ Draw 2.<br/><br/>When this attacks, ⚠ Fault 2: Destroy this.</p>
+
             </div>
           
             <div class="card-section-attack">
-              5
+              <p>4</p>
+
             </div>
           
             <div class="card-section-defense">
-              4
+              <p>9</p>
+
             </div>
           
     </div>
@@ -1354,27 +1469,33 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Scrap Melder
+              <p>Imrya</p>
+
             </div>
           
             <div class="card-section-type">
-              Mage
+              <p>Mech</p>
+
             </div>
           
             <div class="card-section-value">
-              1
+              <p>3</p>
+
             </div>
           
             <div class="card-section-text">
-              ☇ Pass a test.
+              <p>☇ Target mech takes no damage this turn.</p>
+
             </div>
           
             <div class="card-section-attack">
-              2
+              <p>3</p>
+
             </div>
           
             <div class="card-section-defense">
-              2
+              <p>12</p>
+
             </div>
           
     </div>
@@ -1390,27 +1511,33 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Piloted Scout
+              <p>Vrak Assault Unit</p>
+
             </div>
           
             <div class="card-section-type">
-              Mech
+              <p>Mech</p>
+
             </div>
           
             <div class="card-section-value">
-              2
+              <p>1</p>
+
             </div>
           
             <div class="card-section-text">
-              Must use mages as a components instead of mechs.
+              <p>When this attacks, ⚠ fault 4: Destroy this.</p>
+
             </div>
           
             <div class="card-section-attack">
-              7
+              <p>5</p>
+
             </div>
           
             <div class="card-section-defense">
-              6
+              <p>4</p>
+
             </div>
           
     </div>
@@ -1426,27 +1553,33 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Well-Made Mech
+              <p>Scrap Melder</p>
+
             </div>
           
             <div class="card-section-type">
-              Mech
+              <p>Mage</p>
+
             </div>
           
             <div class="card-section-value">
-              1
+              <p>1</p>
+
             </div>
           
             <div class="card-section-text">
-              You can play this from your scraphead once per turn. It comes into play tapped.
+              <p>☇ Pass a test.</p>
+
             </div>
           
             <div class="card-section-attack">
-              1
+              <p>2</p>
+
             </div>
           
             <div class="card-section-defense">
-              1
+              <p>2</p>
+
             </div>
           
     </div>
@@ -1462,27 +1595,117 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Possessed Guardian
+              <p>Piloted Scout</p>
+
             </div>
           
             <div class="card-section-type">
-              Mech
+              <p>Mech</p>
+
             </div>
           
             <div class="card-section-value">
-              1
+              <p>2</p>
+
             </div>
           
             <div class="card-section-text">
-              ☠ Shutdown: Draw a card.
+              <p>Must use mages as a components instead of mechs.</p>
+
             </div>
           
             <div class="card-section-attack">
-              2
+              <p>7</p>
+
             </div>
           
             <div class="card-section-defense">
-              3
+              <p>6</p>
+
+            </div>
+          
+    </div>
+   
+    <div 
+      class="card" 
+      style="
+        height: 88mm;
+        width: 63mm;
+        margin-bottom: 0mm;
+        margin-right: 0mm;
+      "
+    >
+      
+            <div class="card-section-name">
+              <p>Well-Made Mech</p>
+
+            </div>
+          
+            <div class="card-section-type">
+              <p>Mech</p>
+
+            </div>
+          
+            <div class="card-section-value">
+              <p>1</p>
+
+            </div>
+          
+            <div class="card-section-text">
+              <p>You can play this from your scraphead once per turn. It comes into play tapped.</p>
+
+            </div>
+          
+            <div class="card-section-attack">
+              <p>1</p>
+
+            </div>
+          
+            <div class="card-section-defense">
+              <p>1</p>
+
+            </div>
+          
+    </div>
+   
+    <div 
+      class="card" 
+      style="
+        height: 88mm;
+        width: 63mm;
+        margin-bottom: 0mm;
+        margin-right: 0mm;
+      "
+    >
+      
+            <div class="card-section-name">
+              <p>Possessed Guardian</p>
+
+            </div>
+          
+            <div class="card-section-type">
+              <p>Mech</p>
+
+            </div>
+          
+            <div class="card-section-value">
+              <p>1</p>
+
+            </div>
+          
+            <div class="card-section-text">
+              <p><strong>☠ Shutdown:</strong> Draw a card.</p>
+
+            </div>
+          
+            <div class="card-section-attack">
+              <p>2</p>
+
+            </div>
+          
+            <div class="card-section-defense">
+              <p>3</p>
+
             </div>
           
     </div>
@@ -1511,27 +1734,33 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Piloted Mechsuit
+              <p>Piloted Mechsuit</p>
+
             </div>
           
             <div class="card-section-type">
-              Mech
+              <p>Mech</p>
+
             </div>
           
             <div class="card-section-value">
-              2
+              <p>2</p>
+
             </div>
           
             <div class="card-section-text">
-              ⚙ Requires a mage as a component
+              <p>⚙ Requires a mage as a component</p>
+
             </div>
           
             <div class="card-section-attack">
-              8
+              <p>8</p>
+
             </div>
           
             <div class="card-section-defense">
-              10
+              <p>10</p>
+
             </div>
           
     </div>
@@ -1547,27 +1776,33 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Squadron Leader
+              <p>Squadron Leader</p>
+
             </div>
           
             <div class="card-section-type">
-              Mech
+              <p>Mech</p>
+
             </div>
           
             <div class="card-section-value">
-              3
+              <p>3</p>
+
             </div>
           
             <div class="card-section-text">
-              ⚙ Requires a mech and a mage as components
+              <p>⚙ Requires a mech and a mage as components</p>
+
             </div>
           
             <div class="card-section-attack">
-              12
+              <p>12</p>
+
             </div>
           
             <div class="card-section-defense">
-              15
+              <p>15</p>
+
             </div>
           
     </div>
@@ -1583,32 +1818,38 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Wisp
+              <p>Wisp</p>
+
             </div>
           
             <div class="card-section-type">
-              Spirit
+              <p>Spirit</p>
+
             </div>
           
             <div class="card-section-value">
-              1
+              <p>1</p>
+
             </div>
           
             <div class="card-section-instant">
-              true
+              <p>true</p>
+
             </div>
           
             <div class="card-section-text">
-              This can be used instead of a mage component.
-☠ Shutdown: Draw a card.
+              <p>This can be used instead of a mage component.<br/><br/><strong>☠ Shutdown:</strong> Draw a card.</p>
+
             </div>
           
             <div class="card-section-attack">
-              0
+              <p>0</p>
+
             </div>
           
             <div class="card-section-defense">
-              1
+              <p>1</p>
+
             </div>
           
     </div>
@@ -1624,27 +1865,33 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Wisp Willer
+              <p>Wisp Willer</p>
+
             </div>
           
             <div class="card-section-type">
-              Mage
+              <p>Mage</p>
+
             </div>
           
             <div class="card-section-value">
-              1
+              <p>1</p>
+
             </div>
           
             <div class="card-section-text">
-              ⛢ Launch: Target a mech. Test X, where X is the target unit's level. Take control of the target.
+              <p><strong>⛢ Launch:</strong> Target a mech. Test X, where X is the target unit&#39;s level. Take control of the target.</p>
+
             </div>
           
             <div class="card-section-attack">
-              1
+              <p>1</p>
+
             </div>
           
             <div class="card-section-defense">
-              1
+              <p>1</p>
+
             </div>
           
     </div>
@@ -1660,15 +1907,18 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Bombardment
+              <p>Bombardment</p>
+
             </div>
           
             <div class="card-section-type">
-              Action
+              <p>Action</p>
+
             </div>
           
             <div class="card-section-text">
-              Deal 1 damage to all enemies
+              <p>Deal 1 damage to all enemies</p>
+
             </div>
           
     </div>
@@ -1684,27 +1934,33 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Manifest Flesh
+              <p>Manifest Flesh</p>
+
             </div>
           
             <div class="card-section-type">
-              Spell
+              <p>Spell</p>
+
             </div>
           
             <div class="card-section-upgrade">
-              true
+              <p>true</p>
+
             </div>
           
             <div class="card-section-text">
-              This unit is no longer a mech
+              <p>This unit is no longer a mech</p>
+
             </div>
           
             <div class="card-section-attack">
-              +1
+              <p>+1</p>
+
             </div>
           
             <div class="card-section-defense">
-              -1
+              <p>-1</p>
+
             </div>
           
     </div>
@@ -1720,23 +1976,28 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Curse of Steel
+              <p>Curse of Steel</p>
+
             </div>
           
             <div class="card-section-type">
-              Spell
+              <p>Spell</p>
+
             </div>
           
             <div class="card-section-upgrade">
-              true
+              <p>true</p>
+
             </div>
           
             <div class="card-section-attack">
-              -2
+              <p>-2</p>
+
             </div>
           
             <div class="card-section-defense">
-              -2
+              <p>-2</p>
+
             </div>
           
     </div>
@@ -1752,31 +2013,38 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Drop-Pod Mech
+              <p>Drop-Pod Mech</p>
+
             </div>
           
             <div class="card-section-type">
-              Mech
+              <p>Mech</p>
+
             </div>
           
             <div class="card-section-instant">
-              true
+              <p>true</p>
+
             </div>
           
             <div class="card-section-value">
-              1
+              <p>1</p>
+
             </div>
           
             <div class="card-section-text">
-              ⚠ Fault 1: Phase this out
+              <p><strong>⚠ Fault 1:</strong> Phase this out</p>
+
             </div>
           
             <div class="card-section-attack">
-              4
+              <p>4</p>
+
             </div>
           
             <div class="card-section-defense">
-              4
+              <p>4</p>
+
             </div>
           
     </div>
@@ -1792,15 +2060,18 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Advanced Blueprints
+              <p>Advanced Blueprints</p>
+
             </div>
           
             <div class="card-section-type">
-              Technology
+              <p>Technology</p>
+
             </div>
           
             <div class="card-section-text">
-              Seek a level 3+ mech
+              <p>Seek a level 3+ mech</p>
+
             </div>
           
     </div>
@@ -1833,11 +2104,13 @@ When this attacks, ⚠ fault 2: Destroy this.
             </div>
           
             <div class="card-section-type">
-              Factory
+              <p>Factory</p>
+
             </div>
           
             <div class="card-section-text">
-              ☇ Draw a card, then discard a card.
+              <p>☇ Draw a card, then discard a card.</p>
+
             </div>
           
     </div>
@@ -1853,15 +2126,18 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Recycling Center
+              <p>Recycling Center</p>
+
             </div>
           
             <div class="card-section-type">
-              Factory
+              <p>Factory</p>
+
             </div>
           
             <div class="card-section-text">
-              ☇ Add a card from your scraphead to your deck.
+              <p>☇ Add a card from your scraphead to your deck.</p>
+
             </div>
           
     </div>
@@ -1877,15 +2153,18 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Artillery Battery
+              <p>Artillery Battery</p>
+
             </div>
           
             <div class="card-section-type">
-              Factory
+              <p>Factory</p>
+
             </div>
           
             <div class="card-section-text">
-              ☇ Deal 1 damage to target unit.
+              <p>☇ Deal 1 damage to target unit.</p>
+
             </div>
           
     </div>
@@ -1901,15 +2180,18 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Defense Array
+              <p>Defense Array</p>
+
             </div>
           
             <div class="card-section-type">
-              Factory
+              <p>Factory</p>
+
             </div>
           
             <div class="card-section-text">
-              ☇ Prevent 1 damage that would be dealt to target.
+              <p>☇ Prevent 1 damage that would be dealt to target.</p>
+
             </div>
           
     </div>
@@ -1925,15 +2207,18 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Repair Line
+              <p>Repair Line</p>
+
             </div>
           
             <div class="card-section-type">
-              Factory
+              <p>Factory</p>
+
             </div>
           
             <div class="card-section-text">
-              ☇ Shuffle a scrap into your deck.
+              <p>☇ Shuffle a scrap into your deck.</p>
+
             </div>
           
     </div>
@@ -1949,15 +2234,18 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Faulty Assembly Line
+              <p>Faulty Assembly Line</p>
+
             </div>
           
             <div class="card-section-type">
-              Factory
+              <p>Factory</p>
+
             </div>
           
             <div class="card-section-text">
-              ☇ Scrap 1.
+              <p>☇ Scrap 1.</p>
+
             </div>
           
     </div>
@@ -1973,15 +2261,18 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Trick of the Eye
+              <p>Trick of the Eye</p>
+
             </div>
           
             <div class="card-section-type">
-              Spell
+              <p>Spell</p>
+
             </div>
           
             <div class="card-section-text">
-              Reroll 1 dice rolled for a Test or Fault.
+              <p>Reroll 1 dice rolled for a Test or Fault.</p>
+
             </div>
           
     </div>
@@ -1997,15 +2288,18 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Search Through Junk
+              <p>Search Through Junk</p>
+
             </div>
           
             <div class="card-section-type">
-              Action
+              <p>Action</p>
+
             </div>
           
             <div class="card-section-text">
-              Roll. Draw that many. Discard until you have three cards.
+              <p>Roll. Draw that many. Discard until you have three cards.</p>
+
             </div>
           
     </div>
@@ -2021,7 +2315,8 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Missile Barrage
+              <p>Missile Barrage</p>
+
             </div>
           
             <div class="card-section-type">
@@ -2029,7 +2324,8 @@ When this attacks, ⚠ fault 2: Destroy this.
             </div>
           
             <div class="card-section-text">
-              Roll 4. Deal 1 damage for each 4+ rolled.
+              <p>Roll 4. Deal 1 damage for each 4+ rolled.</p>
+
             </div>
           
     </div>
@@ -2058,15 +2354,18 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              The Claw
+              <p>The Claw</p>
+
             </div>
           
             <div class="card-section-type">
-              Technology
+              <p>Technology</p>
+
             </div>
           
             <div class="card-section-text">
-              Test 5+: Seek a card.
+              <p>Test 5+: Seek a card.</p>
+
             </div>
           
     </div>
@@ -2082,15 +2381,18 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Harvest Scrap
+              <p>Harvest Scrap</p>
+
             </div>
           
             <div class="card-section-type">
-              Action
+              <p>Action</p>
+
             </div>
           
             <div class="card-section-text">
-              Shuffle the top three cards of your scraphead into your deck
+              <p>Shuffle the top three cards of your scraphead into your deck</p>
+
             </div>
           
     </div>
@@ -2106,19 +2408,23 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Overclock
+              <p>Overclock</p>
+
             </div>
           
             <div class="card-section-type">
-              Technology
+              <p>Technology</p>
+
             </div>
           
             <div class="card-section-instant">
-              true
+              <p>true</p>
+
             </div>
           
             <div class="card-section-text">
-              Untap a mech
+              <p>Untap a mech</p>
+
             </div>
           
     </div>
@@ -2134,19 +2440,23 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Powercut
+              <p>Powercut</p>
+
             </div>
           
             <div class="card-section-type">
-              Technology
+              <p>Technology</p>
+
             </div>
           
             <div class="card-section-instant">
-              true
+              <p>true</p>
+
             </div>
           
             <div class="card-section-text">
-              Tap a factory
+              <p>Tap a factory</p>
+
             </div>
           
     </div>
@@ -2162,15 +2472,18 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              EMP
+              <p>EMP</p>
+
             </div>
           
             <div class="card-section-type">
-              Technology
+              <p>Technology</p>
+
             </div>
           
             <div class="card-section-text">
-              Tap all factories
+              <p>Tap all factories</p>
+
             </div>
           
     </div>
@@ -2186,15 +2499,18 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Patent Lawsuit
+              <p>Patent Lawsuit</p>
+
             </div>
           
             <div class="card-section-type">
-              Action
+              <p>Action</p>
+
             </div>
           
             <div class="card-section-text">
-              Burn a card in your scrapheap. Destroy a mech or factory with the same name.
+              <p>Burn a card in your scrapheap. Destroy a mech or factory with the same name.</p>
+
             </div>
           
     </div>
@@ -2210,19 +2526,23 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Strike!
+              <p>Strike!</p>
+
             </div>
           
             <div class="card-section-type">
-              Action
+              <p>Action</p>
+
             </div>
           
             <div class="card-section-instant">
-              true
+              <p>true</p>
+
             </div>
           
             <div class="card-section-text">
-              Tap a factory. It doesn't untap next reboot phase.
+              <p>Tap a factory. It doesn&#39;t untap next reboot phase.</p>
+
             </div>
           
     </div>
@@ -2238,15 +2558,18 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Recycle
+              <p>Recycle</p>
+
             </div>
           
             <div class="card-section-type">
-              Action
+              <p>Action</p>
+
             </div>
           
             <div class="card-section-text">
-              Burn 3. Draw 1.
+              <p>Burn 3. Draw 1.</p>
+
             </div>
           
     </div>
@@ -2262,15 +2585,18 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Assembly Line
+              <p>Assembly Line</p>
+
             </div>
           
             <div class="card-section-type">
-              Factory
+              <p>Factory</p>
+
             </div>
           
             <div class="card-section-text">
-              ☇ Burn 1. Summon a 1/1 mech.
+              <p>☇ Burn 1. Summon a 1/1 mech.</p>
+
             </div>
           
     </div>
@@ -2299,15 +2625,18 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Hex
+              <p>Hex</p>
+
             </div>
           
             <div class="card-section-type">
-              Spell
+              <p>Spell</p>
+
             </div>
           
             <div class="card-section-text">
-              Roll 6. If you get a 1, your opponent discards a card.
+              <p>Roll 6. If you get a 1, your opponent discards a card.</p>
+
             </div>
           
     </div>
@@ -2323,15 +2652,18 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Self-Destruct Sequence
+              <p>Self-Destruct Sequence</p>
+
             </div>
           
             <div class="card-section-type">
-              Action
+              <p>Action</p>
+
             </div>
           
             <div class="card-section-text">
-              Sacrifice a mech. Deal damage equal to its health to all enemies.
+              <p>Sacrifice a mech. Deal damage equal to its health to all enemies.</p>
+
             </div>
           
     </div>
@@ -2347,15 +2679,18 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Disassemble
+              <p>Disassemble</p>
+
             </div>
           
             <div class="card-section-type">
-              Action
+              <p>Action</p>
+
             </div>
           
             <div class="card-section-text">
-              Destroy a level 2+ mech you control. Its component remain. Draw a card.
+              <p>Destroy a level 2+ mech you control. Its component remain.<br/><br/>Draw a card.</p>
+
             </div>
           
     </div>
@@ -2371,15 +2706,18 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Reboot Systems
+              <p>Reboot Systems</p>
+
             </div>
           
             <div class="card-section-type">
-              Action
+              <p>Action</p>
+
             </div>
           
             <div class="card-section-text">
-              Discard your hand. Draw 4 cards.
+              <p>Discard your hand. Draw 4 cards.</p>
+
             </div>
           
     </div>
@@ -2395,15 +2733,18 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Starbind
+              <p>Starbind</p>
+
             </div>
           
             <div class="card-section-type">
-              Spell
+              <p>Spell</p>
+
             </div>
           
             <div class="card-section-text">
-              Phase out 1 target unit (flip it over)
+              <p>Phase out 1 target unit (flip it over)</p>
+
             </div>
           
     </div>
@@ -2419,15 +2760,18 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Hack
+              <p>Hack</p>
+
             </div>
           
             <div class="card-section-type">
-              Action
+              <p>Action</p>
+
             </div>
           
             <div class="card-section-text">
-              Phase out target mech
+              <p>Phase out target mech</p>
+
             </div>
           
     </div>
@@ -2443,7 +2787,8 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Ghost in the Machine
+              <p>Ghost in the Machine</p>
+
             </div>
           
             <div class="card-section-type">
@@ -2451,7 +2796,8 @@ When this attacks, ⚠ fault 2: Destroy this.
             </div>
           
             <div class="card-section-text">
-              Not sure
+              <p>Not sure</p>
+
             </div>
           
     </div>
@@ -2467,15 +2813,18 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              AI Unit
+              <p>AI Unit</p>
+
             </div>
           
             <div class="card-section-type">
-              Technology
+              <p>Technology</p>
+
             </div>
           
             <div class="card-section-text">
-              You can use this as a substitute for a mage component. The summoned unit has 'Test 2+ to attack'
+              <p>You can use this as a substitute for a mage component. The summoned unit has &#39;Test 2+ to attack&#39;</p>
+
             </div>
           
     </div>
@@ -2491,15 +2840,18 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Mech Manufacture
+              <p>Mech Manufacture</p>
+
             </div>
           
             <div class="card-section-type">
-              Factory
+              <p>Factory</p>
+
             </div>
           
             <div class="card-section-text">
-              ☇ Summon a 1/1 mech.
+              <p>☇ Summon a 1/1 mech.</p>
+
             </div>
           
     </div>
@@ -2528,15 +2880,18 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Sortek Defense Field
+              <p>Sortek Defense Field</p>
+
             </div>
           
             <div class="card-section-type">
-              Factory
+              <p>Factory</p>
+
             </div>
           
             <div class="card-section-text">
-              ☇ Prevent all damage that would be dealt to target factory this turn.
+              <p>☇ Prevent all damage that would be dealt to target factory this turn.</p>
+
             </div>
           
     </div>
@@ -2552,19 +2907,23 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Ambush
+              <p>Ambush</p>
+
             </div>
           
             <div class="card-section-type">
-              Action
+              <p>Action</p>
+
             </div>
           
             <div class="card-section-instant">
-              true
+              <p>true</p>
+
             </div>
           
             <div class="card-section-text">
-              Target a mech you control and another mech. The two units fight.
+              <p>Target a mech you control and another mech. The two units fight.</p>
+
             </div>
           
     </div>
@@ -2580,19 +2939,23 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              False Intelligence
+              <p>False Intelligence</p>
+
             </div>
           
             <div class="card-section-type">
-              Action
+              <p>Action</p>
+
             </div>
           
             <div class="card-section-instant">
-              true
+              <p>true</p>
+
             </div>
           
             <div class="card-section-text">
-              When an enemy attacks, choose a new target you control.
+              <p>When an enemy attacks, choose a new target you control.</p>
+
             </div>
           
     </div>
@@ -2608,19 +2971,23 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Reload
+              <p>Reload</p>
+
             </div>
           
             <div class="card-section-type">
-              Action
+              <p>Action</p>
+
             </div>
           
             <div class="card-section-instant">
-              true
+              <p>true</p>
+
             </div>
           
             <div class="card-section-text">
-              Draw 2 cards
+              <p>Draw 2 cards</p>
+
             </div>
           
     </div>
@@ -2636,15 +3003,18 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Intone Amar
+              <p>Intone Amar</p>
+
             </div>
           
             <div class="card-section-type">
-              Spell
+              <p>Spell</p>
+
             </div>
           
             <div class="card-section-text">
-              Test 3+: The next mech you summon requires 1 less component.
+              <p>Test 3+: The next mech you summon requires 1 less component.</p>
+
             </div>
           
     </div>
@@ -2660,15 +3030,18 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              New Parliament
+              <p>New Parliament</p>
+
             </div>
           
             <div class="card-section-type">
-              Event
+              <p>Event</p>
+
             </div>
           
             <div class="card-section-text">
-              Destroy an event
+              <p>Destroy an event</p>
+
             </div>
           
     </div>
@@ -2684,19 +3057,23 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Glitch
+              <p>Glitch</p>
+
             </div>
           
             <div class="card-section-type">
-              Action
+              <p>Action</p>
+
             </div>
           
             <div class="card-section-instant">
-              true
+              <p>true</p>
+
             </div>
           
             <div class="card-section-text">
-              Discard a card. Your opponent cannot use mechs as components this turn.
+              <p>Discard a card. <br/><br/>Your opponent cannot use mechs as components this turn.</p>
+
             </div>
           
     </div>
@@ -2712,19 +3089,23 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Forge Parts
+              <p>Forge Parts</p>
+
             </div>
           
             <div class="card-section-type">
-              Action
+              <p>Action</p>
+
             </div>
           
             <div class="card-section-instant">
-              true
+              <p>true</p>
+
             </div>
           
             <div class="card-section-text">
-              Shuffle the top scrap into your deck. Draw a card.
+              <p>Shuffle the top scrap into your deck. Draw a card.</p>
+
             </div>
           
     </div>
@@ -2740,19 +3121,23 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Infernal Binding
+              <p>Infernal Binding</p>
+
             </div>
           
             <div class="card-section-type">
-              Spell
+              <p>Spell</p>
+
             </div>
           
             <div class="card-section-instant">
-              true
+              <p>true</p>
+
             </div>
           
             <div class="card-section-text">
-              Sacrifice a mech. Destroy target mech.
+              <p>Sacrifice a mech. Destroy target mech.</p>
+
             </div>
           
     </div>
@@ -2781,15 +3166,18 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Means of Production
+              <p>Means of Production</p>
+
             </div>
           
             <div class="card-section-type">
-              Action
+              <p>Action</p>
+
             </div>
           
             <div class="card-section-text">
-              Seek a factory
+              <p>Seek a factory</p>
+
             </div>
           
     </div>
@@ -2805,15 +3193,18 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Harvest Parts
+              <p>Harvest Parts</p>
+
             </div>
           
             <div class="card-section-type">
-              Action
+              <p>Action</p>
+
             </div>
           
             <div class="card-section-text">
-              Burn 1. Phase in a mech.
+              <p>Burn 1. Phase in a mech.</p>
+
             </div>
           
     </div>
@@ -2829,15 +3220,18 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Scrap for Parts
+              <p>Scrap for Parts</p>
+
             </div>
           
             <div class="card-section-type">
-              Action
+              <p>Action</p>
+
             </div>
           
             <div class="card-section-text">
-              Sacrifice a mech. Return a factory from your scraphead into play.
+              <p>Sacrifice a mech. Return a factory from your scraphead into play.</p>
+
             </div>
           
     </div>
@@ -2853,15 +3247,18 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Verdence
+              <p>Verdence</p>
+
             </div>
           
             <div class="card-section-type">
-              Spell
+              <p>Spell</p>
+
             </div>
           
             <div class="card-section-text">
-              Draw 2 cards
+              <p>Draw 2 cards</p>
+
             </div>
           
     </div>
@@ -2877,15 +3274,18 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Decay
+              <p>Decay</p>
+
             </div>
           
             <div class="card-section-type">
-              Spell
+              <p>Spell</p>
+
             </div>
           
             <div class="card-section-text">
-              Roll. Target player scraps X, where X is the result.
+              <p>Roll. Target player scraps X, where X is the result.</p>
+
             </div>
           
     </div>
@@ -2901,15 +3301,18 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Overtime
+              <p>Overtime</p>
+
             </div>
           
             <div class="card-section-type">
-              Event
+              <p>Event</p>
+
             </div>
           
             <div class="card-section-text">
-              Untap your factories
+              <p>Untap your factories</p>
+
             </div>
           
     </div>
@@ -2925,15 +3328,18 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Layline Gate
+              <p>Layline Gate</p>
+
             </div>
           
             <div class="card-section-type">
-              Factory
+              <p>Factory</p>
+
             </div>
           
             <div class="card-section-text">
-              ☇ Draw a card. Discard a card.
+              <p>☇ Draw a card. Discard a card.</p>
+
             </div>
           
     </div>
@@ -2949,15 +3355,18 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Guerilla Warfare
+              <p>Guerilla Warfare</p>
+
             </div>
           
             <div class="card-section-type">
-              Action
+              <p>Action</p>
+
             </div>
           
             <div class="card-section-text">
-              Phase our your units until your next reboot phase
+              <p>Phase our your units until your next reboot phase</p>
+
             </div>
           
     </div>
@@ -2973,19 +3382,23 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Lunar Blessing
+              <p>Lunar Blessing</p>
+
             </div>
           
             <div class="card-section-upgrade">
-              true
+              <p>true</p>
+
             </div>
           
             <div class="card-section-type">
-              Spell
+              <p>Spell</p>
+
             </div>
           
             <div class="card-section-text">
-              ☠ Shutdown: Return this unit to your hand.
+              <p><strong>☠ Shutdown:</strong> Return this unit to your hand.</p>
+
             </div>
           
     </div>
@@ -3014,19 +3427,23 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              Wild Overgrowth
+              <p>Wild Overgrowth</p>
+
             </div>
           
             <div class="card-section-type">
-              Spell
+              <p>Spell</p>
+
             </div>
           
             <div class="card-section-instant">
-              true
+              <p>true</p>
+
             </div>
           
             <div class="card-section-text">
-              Tap target enemy unit
+              <p>Tap target enemy unit</p>
+
             </div>
           
     </div>
@@ -3042,15 +3459,18 @@ When this attacks, ⚠ fault 2: Destroy this.
     >
       
             <div class="card-section-name">
-              ✇ Invoker Layline
+              <p>✇ Invoker Layline</p>
+
             </div>
           
             <div class="card-section-type">
-              Factory
+              <p>Factory</p>
+
             </div>
           
             <div class="card-section-text">
-              ☇ Test 6+: Destroy target creature.
+              <p>☇ Test 6+: Destroy target creature.</p>
+
             </div>
           
     </div>
