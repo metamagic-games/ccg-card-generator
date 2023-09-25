@@ -17,7 +17,7 @@ const generateCard = (card, dimensions) => {
 
           return `
             <div class="card-section-${key}">
-              ${marked.parse(value)}
+              ${marked.parse(String(value))}
             </div>
           `;
         })
