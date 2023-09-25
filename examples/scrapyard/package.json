@@ -31,7 +31,7 @@
     "@babel/node": "^7.22.19",
     "@babel/preset-env": "^7.22.20",
     "babel-jest": "^29.7.0",
-    "ccg-card-generator": "^2.2.0",
+    "ccg-card-generator": "^2.3.0",
     "lodash": "^4.17.21",
     "marked": "^9.0.3",
     "path": "^0.12.7",
