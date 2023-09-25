@@ -50,11 +50,11 @@ const generatePdf = (cards, options) => {
   } = options
 
   const dimensions = {
-    pageDimensions: {
+    page: {
       ...defaultPageDimensions,
       ...pageDimensions,
     },
-    cardDimensions: {
+    card: {
       ...defaultCardDimensions,
       ...cardDimensions,      
     },
