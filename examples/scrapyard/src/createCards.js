@@ -23,6 +23,7 @@ const options = {
       marginRight: 0,
       marginLeft: 0,
       marginBottom: 0,
+      printBackground: true,
       paperWidth: 210 / 25.4,
       paperHeight: 297 / 25.4,
     }
