@@ -2,12 +2,9 @@ import * as htmlPdfChrome from "html-pdf-chrome";
 import fs from "fs";
 import generateHtml from "../html";
 
-const HEIGHT = 282;
-const WIDTH = 216;
-
 const defaultPageDimensions = {
-  height: HEIGHT,
-  width: WIDTH,
+  height: 282,
+  width: 216,
   padding: 5,
 };
 
