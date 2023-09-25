@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap');
 
+@page {
+  size: 210mm 297mm;
+}
+
 * {
   box-sizing: border-box;
 
@@ -45,17 +49,18 @@
 
 .card .card-section-name {
   font-weight: bold;
-  width: 80%;
+  max-width: 80%;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -1px;
+  left: -1px;
   border: 1px solid black;
-  padding: 0.25em;
+  padding: 0.25em 0.5em;
+  font-size: 0.85em;  
 }
 
 .card .card-section-type {
   position: absolute;
-  left: 0;
+  left: -1px;
   top: 30px;
   border: 1px solid black;
   padding: 0.125em 0.25em;
@@ -64,7 +69,7 @@
 
 .card .card-section-value {
   position: absolute;
-  left: 0;
+  left: -1px;
   top: 50px;
   border: 1px solid black;
   padding: 0.125em 0.25em;
@@ -103,7 +108,7 @@
   min-height: 25%;
   text-align: center;
   padding: 0.5em;
-  font-size: 0.8em;
+  font-size: 0.7em;
 }
 
 .card .card-section-attack,
@@ -112,11 +117,12 @@
   border-radius: 2px;
   position: absolute;
   bottom: 5px;
-  padding: 0.25em;
+  padding: 0.25em 0;
   background: #efefef;
   width: 30px;
   height: 30px;
   text-align: center;
+  font-weight: bold;
 }
 
 .card .card-section-attack {

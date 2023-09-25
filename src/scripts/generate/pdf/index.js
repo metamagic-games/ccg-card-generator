@@ -5,18 +5,17 @@ import generateHtml from "../html";
 const HEIGHT = 282;
 const WIDTH = 216;
 
-const defaultDimensions = {
-  page: {
-    height: HEIGHT,
-    width: WIDTH,
-    padding: 5,
-  },
-  card: {
-    height: 82,
-    width: 59,
-    margin: 2,
-    border: 1,
-  },
+const defaultPageDimensions = {
+  height: HEIGHT,
+  width: WIDTH,
+  padding: 5,
+};
+
+const defaultCardDimensions = {
+  height: 82,
+  width: 59,
+  margin: 2,
+  border: 1,
 };
 
 const defaultPdfOptions = {
@@ -45,9 +44,21 @@ const generatePdf = (cards, options) => {
   	destination="./output.pdf", 
   	pdfOptions, 
   	style=defaultStylesheet,
-  	dimensions=defaultDimensions,
+  	pageDimensions,
+    cardDimensions,
     htmlGenerator,
   } = options
+
+  const dimensions = {
+    pageDimensions: {
+      ...defaultPageDimensions,
+      ...pageDimensions,
+    },
+    cardDimensions: {
+      ...defaultCardDimensions,
+      ...cardDimensions,      
+    },
+  }
 
   if (debug) console.log(cards, options)
 

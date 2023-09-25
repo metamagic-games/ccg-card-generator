@@ -5,11 +5,12 @@ import createHtmlPages from "./createHtmlPages";
 
 const getCardsPerPage = (dimensions) => {
   const cardsPerRow = Math.floor(
-    (dimensions.page.width - dimensions.page.padding) /
+    (dimensions.page.width - dimensions.page.padding * 2) /
       (dimensions.card.width + dimensions.card.margin + dimensions.card.border),
   );
+  
   const cardsPerColumn = Math.floor(
-    (dimensions.page.height - dimensions.page.padding) /
+    (dimensions.page.height - dimensions.page.padding * 2) /
       (dimensions.card.height +
         dimensions.card.margin +
         dimensions.card.border),

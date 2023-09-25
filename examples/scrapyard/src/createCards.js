@@ -5,6 +5,19 @@ const options = {
   debug: true,
   style: "./src/styles/scrapheap.css",
   destination: "./cards.pdf",
+  dimensions: {
+    page: {
+      height: 297,
+      width: 210,
+      padding: 5,
+    },
+    card: {
+      height: 88,
+      width: 63,
+      margin: 0,
+      border: 1,
+    },
+  }
 };
 
 generateCards(input.cards, options);
