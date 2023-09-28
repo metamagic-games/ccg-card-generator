@@ -304,6 +304,22 @@ module.exports = {
 			defense: 15,
 		},
 		{
+			name: "Fuel-Hungry Hulk",
+			type: "Mech", 
+			value: 2, 
+			text: "If this is targeted by an effect, you may burn 3 to negate that effect.",
+			attack: 10,
+			defense: 8,
+		},
+		{
+			name: "Malfunctionist",
+			type: "Mage", 
+			value: 1, 
+			text: "Launch: Destroy target level 1 mech.",
+			attack: 3,
+			defense: 1,
+		},
+		{
 			name: "Wisp",
 			type: "Spirit", 
 			value: 1, 
@@ -355,12 +371,12 @@ module.exports = {
 			text: "Seek a level 3+ mech",
 		},
 		{
-			name: "",
+			name: "♽ Recycling Center",
 			type: "Factory",  
-			text: "☇ Draw a card, then discard a card.",
+			text: "☇ Discard a card, then draw a card.",
 		},
 		{
-			name: "Recycling Center",
+			name: "Repair Shop",
 			type: "Factory",  
 			text: "☇ Add a card from your scraphead to your deck.",
 		},
@@ -606,9 +622,95 @@ module.exports = {
 			type: "Factory",  
 			text: "☇ Test 6+: Destroy target creature.",
 		},
+		{
+			name: "Shield",
+			upgrade: true,  
+			text: "Draw a card.<br/>If this unit would take damage, prevent it and scrap this.",
+		},
+		{
+			name: "Battery",
+			upgrade: true,  
+			text: "After an attack, destory this.",
+		},
+		{
+			name: "Rust",
+			upgrade: true,  
+			text: "This can only upgrade mechs",
+			attack: "-3",
+			defense: "-3",
+		},
+		{
+			name: "Extra Arm",
+			upgrade: true,  
+			attack: "+2",
+		},
+		{
+			name: "Ejector Seat",
+			upgrade: true,  
+			text: "Shutdown: This unit's components remain on the battlefield.",
+		},
+		{
+			name: "Icarus Suit",
+			upgrade: true,  
+			text: "Can only upgrade mages.<br/>This unit counts as a mech.",
+			attack: "+2",
+			defense: "+2",
+		},
+		{
+			name: "Machine Rot",
+			type: "Spell",
+			upgrade: true,  
+			text: "Can ony upgrade mechs",
+			attack: "-1",
+			defense: "-3",
+		},
+		{
+			name: "Vrak Augments",
+			upgrade: true,  
+			text: "Fault 1: Scrap this.",
+			attack: "+4",
+			defense: "+1",
+		},
+		{
+			name: "Scrapbind",
+			type: "Spell",
+			upgrade: true,  
+			text: "X = number of cards in this unit's scrapheap.",
+			attack: "-X",
+		},
+		{
+			name: "Climbing Vines",
+			type: "Spell",
+			upgrade: true,  
+			attack: "-4",
+		},
+		{
+			name: "Exoskeleton",
+			upgrade: true,  
+			text: "Can only upgrade a mage.<br/>Unit counts as a mech.",
+			attack: "+3",
+			defense: "+3",
+		},
+		{
+			name: "Pact of Knowledge",
+			type: "Spell",
+			text: "Destroy a mage you control. Seek a spell.",
+		},
+		{
+			name: "Veto",
+			type: "Action",
+			instant: true,
+			text: "Negate target action or event",
+		},
+		{
+			name: "Recharge",
+			type: "Action",  
+			text: "Untap target mech.",
+		},
 	],
 };
 
+// ❖
 // ⚀
 // ⚁
 // ⚂

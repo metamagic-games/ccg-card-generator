@@ -99,7 +99,7 @@ p {
 .card .card-section-upgrade:before,
 .card .card-section-instant:before {
   visibility: visible;
-  content: '+';
+  content: 'X';
   position: absolute;
   right: 5px;
   top: 5px;
@@ -110,6 +110,14 @@ p {
   padding: 0.25em;
   font-size: 0.8em;
   text-align: center;
+}
+
+.card .card-section-upgrade:before {
+  content: '✚';
+}
+
+.card .card-section-instant:before {
+  content: '✧';
 }
 
 .card .card-section-text {
