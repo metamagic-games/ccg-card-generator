@@ -8,7 +8,7 @@ const options = {
   pageDimensions: {
     height: 297,
     width: 210,
-    padding: 5,
+    padding: 8,
   },
   cardDimensions: {
     height: 88,
@@ -30,7 +30,14 @@ const options = {
   }
 };
 
-const sortedCards = input.cards
-sortedCards.sort((a,b) => a.name < b.name ? -1 : 1)
+generateCards(input.cards, options);
 
-generateCards(sortedCards, options);
+// const sortedCards = input.cards
+// sortedCards.sort((a,b) => a.name < b.name ? -1 : 1)
+
+// generateCards(sortedCards, options);
+
+// const sortedCards = input.cards.map(card=>card.rarity === "Common")
+// sortedCards.sort((a,b) => a.name < b.name ? -1 : 1)
+
+// generateCards(sortedCards, options);
