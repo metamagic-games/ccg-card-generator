@@ -223,7 +223,7 @@ module.exports = {
 			rarity: "Legendary",
 		},
 		{
-			name: "Paxfron Emissary",
+			name: "Paxfront Emissary",
 			type: "Mage", 
 			value: 1, 
 			text: "**⛢ Launch:** Give a mech +2 attack.",
