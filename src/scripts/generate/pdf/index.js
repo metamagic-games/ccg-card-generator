@@ -28,23 +28,35 @@ const defaultPdfOptions = {
 const defaultStylesheet = "./node_modules/ccg-card-generator/lib/styles/prototype.css";
 
 const writeDebugHTML = (html) => {
-  console.log("Saving interim HTML...");
-
-  fs.writeFile("debug.html", html, function (err) {
-    if (err) console.log(err);
+  return new Promise((resolve, reject) => {
+    fs.writeFile("debug.html", html, (err) => {
+      if (err) {
+        reject(new Error(`Failed to write debug HTML: ${err.message}`));
+      } else {
+        resolve();
+      }
+    });
   });
 };
 
-const generatePdf = (cards, options) => {
+const generatePdf = async (cards, options = {}) => {
+  if (!Array.isArray(cards)) {
+    throw new Error("Cards must be an array");
+  }
+
+  if (cards.length === 0) {
+    throw new Error("Cards array cannot be empty");
+  }
+
   const {
-  	debug=true,
-  	destination="./output.pdf", 
-  	pdfOptions, 
-  	style=defaultStylesheet,
-  	pageDimensions,
+    debug = false,
+    destination = "./output.pdf",
+    pdfOptions,
+    style = defaultStylesheet,
+    pageDimensions,
     cardDimensions,
     htmlGenerator,
-  } = options
+  } = options;
 
   const dimensions = {
     page: {
@@ -53,33 +65,25 @@ const generatePdf = (cards, options) => {
     },
     card: {
       ...defaultCardDimensions,
-      ...cardDimensions,      
+      ...cardDimensions,
     },
-  }
-
-  if (debug) console.log(cards, options)
-
-  console.log("Generating cards...");
-  if (debug) console.log(style, dimensions)
+  };
 
   const html = generateHtml(cards, style, dimensions, htmlGenerator);
 
   if (debug) {
-    writeDebugHTML(html);
+    await writeDebugHTML(html);
   }
-
-  console.log("Creating PDF...");
 
   const printOptions = {
-  	...defaultPdfOptions,
-  	...pdfOptions, 
-  }
-  console.log("Print options:", printOptions);
+    ...defaultPdfOptions,
+    ...pdfOptions,
+  };
 
-  return htmlPdfChrome
-    .create(html, printOptions)
-    .then((newPdf) => newPdf.toFile(destination || "test.pdf"))
-    .then((_) => console.log(`${destination} generated`));
+  const pdf = await htmlPdfChrome.create(html, printOptions);
+  await pdf.toFile(destination);
+
+  return { destination, cardCount: cards.length };
 };
 
 export default generatePdf;

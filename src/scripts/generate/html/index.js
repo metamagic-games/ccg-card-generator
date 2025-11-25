@@ -1,4 +1,3 @@
-import _ from "lodash";
 import fs from "fs";
 
 import createHtmlPages from "./createHtmlPages";
@@ -32,9 +31,7 @@ const generateHTML = (cards, styles, dimensions, htmlGenerator=createHtmlPages) 
     cardPages[page].push(card);
   });
 
-  const css = fs.readFileSync(styles, function (err) {
-    if (err) console.log(err);
-  });
+  const css = fs.readFileSync(styles, "utf8");
 
   return `
     <html>
