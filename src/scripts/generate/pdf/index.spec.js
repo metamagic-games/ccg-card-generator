@@ -3,7 +3,12 @@ import * as htmlPdfChrome from "html-pdf-chrome";
 import fs from "fs";
 
 jest.mock("html-pdf-chrome");
-jest.mock("fs");
+jest.mock("fs", () => ({
+  readFileSync: jest.fn(),
+  promises: {
+    writeFile: jest.fn(),
+  },
+}));
 jest.mock("../html", () => {
   return jest.fn().mockReturnValue("<html><body>mock html</body></html>");
 });
@@ -15,7 +20,7 @@ describe("generatePdf", () => {
   beforeEach(() => {
     htmlPdfChrome.create.mockResolvedValue(mockPdf);
     fs.readFileSync.mockReturnValue(".card {}");
-    fs.writeFile.mockImplementation((path, content, callback) => callback(null));
+    fs.promises.writeFile.mockResolvedValue();
   });
 
   afterEach(() => {
@@ -155,24 +160,21 @@ describe("generatePdf", () => {
       const cards = [{ name: "Test Card" }];
       await generatePdf(cards, {});
 
-      expect(fs.writeFile).not.toHaveBeenCalled();
+      expect(fs.promises.writeFile).not.toHaveBeenCalled();
     });
 
     it("should write debug HTML when debug is true", async () => {
       const cards = [{ name: "Test Card" }];
       await generatePdf(cards, { debug: true });
 
-      expect(fs.writeFile).toHaveBeenCalledWith(
+      expect(fs.promises.writeFile).toHaveBeenCalledWith(
         "debug.html",
-        expect.any(String),
-        expect.any(Function)
+        expect.any(String)
       );
     });
 
     it("should reject if debug HTML write fails", async () => {
-      fs.writeFile.mockImplementation((path, content, callback) =>
-        callback(new Error("Write failed"))
-      );
+      fs.promises.writeFile.mockRejectedValue(new Error("Write failed"));
 
       const cards = [{ name: "Test Card" }];
       await expect(generatePdf(cards, { debug: true })).rejects.toThrow(

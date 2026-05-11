@@ -1,5 +1,6 @@
 import * as htmlPdfChrome from "html-pdf-chrome";
 import fs from "fs";
+import path from "path";
 import generateHtml from "../html";
 
 const defaultPageDimensions = {
@@ -25,18 +26,14 @@ const defaultPdfOptions = {
   },
 };
 
-const defaultStylesheet = "./node_modules/ccg-card-generator/lib/styles/prototype.css";
+const defaultStylesheet = path.join(__dirname, "../../../styles/prototype.css");
 
-const writeDebugHTML = (html) => {
-  return new Promise((resolve, reject) => {
-    fs.writeFile("debug.html", html, (err) => {
-      if (err) {
-        reject(new Error(`Failed to write debug HTML: ${err.message}`));
-      } else {
-        resolve();
-      }
-    });
-  });
+const writeDebugHTML = async (html) => {
+  try {
+    await fs.promises.writeFile("debug.html", html);
+  } catch (err) {
+    throw new Error(`Failed to write debug HTML: ${err.message}`);
+  }
 };
 
 const generatePdf = async (cards, options = {}) => {

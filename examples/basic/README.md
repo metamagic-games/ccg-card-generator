@@ -1,15 +1,26 @@
-# ccg-card-generator-sample-project
+# Example: basic
 
-With this sample project you can quickly generate printable pages of trading cards, using [ccg-card-generator](https://github.com/paragon-games/ccg-card-generator).
+Minimal example showing how to drive `ccg-card-generator` from a small JSON config and the default renderer.
 
-## Getting started
+## Files
 
-1. Clone this repo
-2. Edit `cards.js`, or add your own json structured collection of cards
-3. Set the `target` and `destination` paths in `createCards.js` (if you've renamed the input file or want to change the name of the output pdf)
-4. `npm install`
-5. `npm run build`
+- `cards.config.js` – the array of card objects.
+- `src/createCards.js` – calls `generateCards(input.cards, options)`.
+- `src/styles/basic.css` – the stylesheet applied to the rendered cards.
 
-## Contributing
+## Run it
 
-If you'd like to contribute, please fork the repository and use a feature branch. Pull requests are welcome!
+From this directory:
+
+```sh
+npm install
+npm run build
+```
+
+That executes `babel-node ./src/createCards`, which writes `cards.pdf` (and `debug.html`, since `debug: true`) into this directory.
+
+## Customising
+
+- Edit `cards.config.js` to change the cards.
+- Edit `src/createCards.js` to change `destination`, `style`, or page/card dimensions.
+- Swap `style` for your own CSS file to restyle.

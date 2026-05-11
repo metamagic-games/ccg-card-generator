@@ -1,15 +1,26 @@
-# ccg-card-generator-sample-project
+# Example: google-sheets
 
-With this sample project you can quickly generate printable pages of trading cards, using [ccg-card-generator](https://github.com/paragon-games/ccg-card-generator).
+Starting point for sourcing cards from a Google Sheet rather than a hand-edited JS file.
 
-## Getting started
+> **Note:** at the moment `cards.config.js` is the same static export as the [basic example](../basic/README.md) — the Google Sheets fetch logic is not yet wired up. Treat this directory as scaffolding to drop a sheet-fetcher into.
 
-1. Clone this repo
-2. Edit `cards.js`, or add your own json structured collection of cards
-3. Set the `target` and `destination` paths in `createCards.js` (if you've renamed the input file or want to change the name of the output pdf)
-4. `npm install`
-5. `npm run build`
+## Files
 
-## Contributing
+- `cards.config.js` – currently a static `module.exports = { cards: [...] }`. Replace with code that reads from your sheet and exports the same shape.
+- `src/createCards.js` – calls `generateCards(input.cards, options)` with the default renderer.
+- `src/styles/basic.css` – the stylesheet.
 
-If you'd like to contribute, please fork the repository and use a feature branch. Pull requests are welcome!
+## Run it
+
+From this directory:
+
+```sh
+npm install
+npm run build
+```
+
+Output: `cards.pdf` plus `debug.html`.
+
+## Wiring up a sheet
+
+`cards.config.js` only needs to export `{ cards: Array<object> }`, so any code path that produces such an array works — e.g., fetch a CSV export of your sheet at build time and parse it into card objects before `module.exports`.

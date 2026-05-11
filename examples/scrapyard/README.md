@@ -1,15 +1,24 @@
-# ccg-card-generator-sample-project
+# Example: scrapyard
 
-With this sample project you can quickly generate printable pages of trading cards, using [ccg-card-generator](https://github.com/paragon-games/ccg-card-generator).
+A larger deck (~1280 lines of card data) printed to A4 with custom page and card dimensions. Useful as a reference for tuning page layout and PDF print options.
 
-## Getting started
+## Files
 
-1. Clone this repo
-2. Edit `cards.js`, or add your own json structured collection of cards
-3. Set the `target` and `destination` paths in `createCards.js` (if you've renamed the input file or want to change the name of the output pdf)
-4. `npm install`
-5. `npm run build`
+- `cards.config.js` – the deck.
+- `src/createCards.js` – calls `generateCards` with custom `pageDimensions` (A4, 8 mm padding), `cardDimensions` (63 × 88 mm), and a `pdfOptions.printOptions` block that zeroes out margins and sets `paperWidth` / `paperHeight` to match A4.
+- `src/styles/scrapheap.css` – the stylesheet.
 
-## Contributing
+## Run it
 
-If you'd like to contribute, please fork the repository and use a feature branch. Pull requests are welcome!
+From this directory:
+
+```sh
+npm install
+npm run build
+```
+
+Output: `cards.pdf` plus `debug.html`.
+
+## Notes
+
+`createCards.js` has commented-out snippets for sorting/filtering the deck before generation – handy if you want to produce, e.g., only commons in alphabetical order.

@@ -55,6 +55,17 @@ describe("createHtmlPages", () => {
       expect(html).toContain("width: 59mm");
       expect(html).toContain("margin-bottom: 2mm");
       expect(html).toContain("margin-right: 2mm");
+      expect(html).toContain("border-width: 1mm");
+    });
+
+    it("should respect a custom card border width", () => {
+      const dimensions = {
+        ...defaultDimensions,
+        card: { ...defaultDimensions.card, border: 3 },
+      };
+      const html = createHtmlPages(dimensions, [[{ name: "Test Card" }]]);
+
+      expect(html).toContain("border-width: 3mm");
     });
 
     it("should create sections for each card property", () => {

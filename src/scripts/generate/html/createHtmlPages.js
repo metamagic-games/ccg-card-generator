@@ -2,13 +2,14 @@ import { marked } from 'marked';
 
 const generateCard = (card, dimensions) => {
   return `
-    <div 
-      class="card" 
+    <div
+      class="card"
       style="
         height: ${dimensions.card.height}mm;
         width: ${dimensions.card.width}mm;
         margin-bottom: ${dimensions.card.margin}mm;
         margin-right: ${dimensions.card.margin}mm;
+        border-width: ${dimensions.card.border}mm;
       "
     >
       ${Object.keys(card)

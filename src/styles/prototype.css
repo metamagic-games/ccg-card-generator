@@ -21,14 +21,13 @@
   background: #dddddd;
   display: flex;
   justify-content: space-between;
-  margin-right: 10mm;
-  margin-bottom: 10mm;
   padding: 1em;
   flex-wrap: wrap;
   flex-direction: column;
   border-radius: 5px;
   outline: 1px dashed #aaa;
-  border: 1px solid black;
+  border-style: solid;
+  border-color: black;
 }
 
 .card .card-section-name {

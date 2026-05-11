@@ -18,19 +18,16 @@ const getCardsPerPage = (dimensions) => {
   return cardsPerRow * cardsPerColumn;
 };
 
-const generateHTML = (cards, styles, dimensions, htmlGenerator=createHtmlPages) => {
-  const cardsPerPage = getCardsPerPage(dimensions);
-  const totalPages = Math.ceil(cards.length / cardsPerPage);
+const chunk = (items, size) => {
+  const chunks = [];
+  for (let i = 0; i < items.length; i += size) {
+    chunks.push(items.slice(i, i + size));
+  }
+  return chunks;
+};
 
-  let cardPages = Array(totalPages)
-    .fill("")
-    .map((x) => []);
-
-  cards.forEach((card, i) => {
-    const page = Math.floor(i / cardsPerPage);
-    cardPages[page].push(card);
-  });
-
+const generateHTML = (cards, styles, dimensions, htmlGenerator = createHtmlPages) => {
+  const cardPages = chunk(cards, getCardsPerPage(dimensions));
   const css = fs.readFileSync(styles, "utf8");
 
   return `

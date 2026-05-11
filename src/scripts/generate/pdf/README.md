@@ -1,92 +1,61 @@
-# PDF
+# PDF print options
 
-## printOptions
+`pdfOptions` is forwarded as-is to [`html-pdf-chrome`](https://github.com/westy92/html-pdf-chrome), which in turn drives Chrome's `Page.printToPDF`. The fields documented below live under `pdfOptions.printOptions`:
 
-### landscape
+```js
+generateCards(cards, {
+  pdfOptions: {
+    printOptions: { /* options below */ },
+  },
+});
+```
 
-Paper orientation. Defaults to false.
+## Options
 
-`landscape?: boolean;`
+| Option                     | Type      | Default      | Description                                                                                       |
+| -------------------------- | --------- | ------------ | ------------------------------------------------------------------------------------------------- |
+| `landscape`                | `boolean` | `false`      | Paper orientation.                                                                                |
+| `displayHeaderFooter`      | `boolean` | `false`      | Whether to render a header and footer band on each page.                                          |
+| `printBackground`          | `boolean` | `false`      | Print CSS background graphics.                                                                    |
+| `scale`                    | `number`  | `1`          | Scale factor applied to the webpage rendering.                                                    |
+| `paperWidth`               | `number`  | `8.5`        | Paper width, **in inches**.                                                                       |
+| `paperHeight`              | `number`  | `11`         | Paper height, **in inches**.                                                                      |
+| `marginTop`                | `number`  | ~`0.4`       | Top margin in inches (default ≈ 1 cm).                                                            |
+| `marginBottom`             | `number`  | ~`0.4`       | Bottom margin in inches (default ≈ 1 cm).                                                         |
+| `marginLeft`               | `number`  | ~`0.4`       | Left margin in inches (default ≈ 1 cm).                                                           |
+| `marginRight`              | `number`  | ~`0.4`       | Right margin in inches (default ≈ 1 cm).                                                          |
+| `pageRanges`               | `string`  | `""`         | Page ranges to print, e.g. `"1-5, 8, 11-13"`. Empty means all pages.                              |
+| `ignoreInvalidPageRanges`  | `boolean` | `false`      | Silently skip parseable-but-invalid ranges (e.g. `"3-2"`).                                        |
+| `headerTemplate`           | `string`  | —            | HTML template for the print header. See below.                                                    |
+| `footerTemplate`           | `string`  | —            | HTML template for the print footer (same format as `headerTemplate`).                             |
+| `preferCSSPageSize`        | `boolean` | `false`      | If true, honour the page size from CSS rather than rescaling to fit `paperWidth` × `paperHeight`. |
 
-### displayHeaderFooter
+### `ccg-card-generator` defaults
 
-Display header and footer. Defaults to false.
+The library's own defaults (applied before your `pdfOptions` are merged in) are:
 
-`displayHeaderFooter?: boolean;`
+```js
+{
+  printOptions: {
+    displayHeaderFooter: false,
+    marginTop: 0,
+    marginRight: 0,
+    marginLeft: 0,
+    marginBottom: 0,
+  },
+}
+```
 
-- Print background graphics. Defaults to false.
-  printBackground?: boolean;
+So unless you override them, Chrome's 1 cm defaults for margins are replaced with zero — which is what you usually want for card sheets.
 
-### ds
+### `headerTemplate` / `footerTemplate`
 
-- Scale of the webpage rendering. Defaults to 1.
-  scale?: number;
+Should be valid HTML. The following classes inject printing values:
 
-### ds
+- `date` – formatted print date
+- `title` – document title
+- `url` – document location
+- `pageNumber` – current page number
+- `totalPages` – total pages in the document
 
-- Paper width in inches. Defaults to 8.5 inches.
-  paperWidth?: number;
-
-### ds
-
-- Paper height in inches. Defaults to 11 inches.
-  paperHeight?: number;
-
-### ds
-
-- Top margin in inches. Defaults to 1cm (~0.4 inches).
-  marginTop?: number;
-
-### ds
-
-- Bottom margin in inches. Defaults to 1cm (~0.4 inches).
-  marginBottom?: number;
-
-### ds
-
-- Left margin in inches. Defaults to 1cm (~0.4 inches).
-  marginLeft?: number;
-
-### ds
-
-- Right margin in inches. Defaults to 1cm (~0.4 inches).
-  marginRight?: number;
-
-### ds
-
-- Paper ranges to print, e.g., '1-5, 8, 11-13'.
-- Defaults to the empty string, which means print all pages.
-  pageRanges?: string;
-
-### ignoreInvalidPageRanges
-
-- Whether to silently ignore invalid but successfully parsed
-- page ranges, such as '3-2'. Defaults to false.
-  ignoreInvalidPageRanges?: boolean;
-
-### headerTemplate
-
-- HTML template for the print header.
-- Should be valid HTML markup with following classes used to inject printing values into them:
-- - `date` formatted print date
-- - `title` document title
-- - `url` document location
-- - `pageNumber` current page number
-- - `totalPages` total pages in the document
-
-*
-
-- For example, `<span class="title"></span>` would generate a span containing the title.
-  `headerTemplate?: string;`
-
-### footerTemplate
-
-HTML template for the print footer. Should use the same format as the `headerTemplate`.
-
-`footerTemplate?: string;`
-
-### preferCSSPageSize
-
-Whether or not to prefer page size as defined by css.
-Defaults to false, in which case the content will be scaled to fit the paper size.
-`preferCSSPageSize?: boolean;`
+For example, `<span class="title"></span>` renders a span containing the document title.
